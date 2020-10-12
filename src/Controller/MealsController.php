@@ -2,7 +2,6 @@
 
 // src/Controller/MealsController.php
 
-
 namespace App\Controller;
 
 //use App\Controller\AppController;
@@ -43,8 +42,8 @@ class MealsController extends AppController {
     public function index() {
         $this->loadComponent('Paginator');
         $meals = $this->Paginator->paginate($this->Meals->find(
-            'all', [
-            'contain' => ['Users'],
+                        'all', [
+                    'contain' => ['Users'],
         ]));
 
         $this->set(compact('meals'));
@@ -59,8 +58,8 @@ class MealsController extends AppController {
      */
     public function view($slug = null) {
         $meal = $this->Meals->findBySlug($slug)->firstOrFail();
-       // debug($meal);
-       // die();
+        // debug($meal);
+        // die();
         $this->set(compact('meal'));
     }
 
@@ -76,13 +75,16 @@ class MealsController extends AppController {
 
             // Hardcoding the user_id is temporary, and will be removed later
             // when we build authentication out.
-            
-            
-            $meal->$this->Auth->user('id');
+            //debug($meal);
+            //die();
 
-          
-           // debug($meal);
-           // die();
+
+            $meal->$this->Auth->user('id');
+            //$meal->user_id = 3;
+
+
+            // debug($meal);
+            // die();
             if ($this->Meals->save($meal)) {
                 $this->Flash->success(__('Your meal has been saved.'));
                 return $this->redirect(['action' => 'index']);

@@ -20,10 +20,10 @@
             <?= $this->Html->link($meal->Other_details, ['action' => 'view', $meal->slug]) ?>
         </td>
         <td>
-            <?= $this->Html->link($meal->Cost_of_meal, ['action' => 'view', $meal->slug]) ?>
+            <?= $meal->Cost_of_meal ?>
         </td>
          <td>
-            <?= $this->Html->link($meal->Date_of_meal, ['action' => 'view', $meal->slug]) ?>
+            <?= $meal->Date_of_meal ?>
         </td>
         <td>
             <?= $meal->user_id ?>

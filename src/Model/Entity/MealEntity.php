@@ -10,8 +10,8 @@ class Meal extends Entity {
 
     protected $_accessible = [
         '*' => true,
-        'id' => false,
-        'slug' => false,
+        'id' => true,
+        'slug' => true,
     ];
 
 }
