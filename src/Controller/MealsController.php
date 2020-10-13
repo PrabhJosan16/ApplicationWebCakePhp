@@ -79,7 +79,7 @@ class MealsController extends AppController {
             //die();
 
 
-            $meal->$this->Auth->user('id');
+            $meal->user_id = $this->Auth->user('id');
             //$meal->user_id = 3;
 
 
