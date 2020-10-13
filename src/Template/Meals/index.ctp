@@ -17,7 +17,7 @@
 <?php foreach ($meals as $meal): ?>
     <tr>
         <td>
-            <?= $this->Html->link($meal->Other_details, ['action' => 'view', $meal->slug]) ?>
+            <?= $this->Html->link($meal->Other_details, ['action' => 'view', $meal->ID]) ?>
         </td>
         <td>
             <?= $meal->Cost_of_meal ?>
@@ -32,10 +32,10 @@
             <?= $meal->created->format(DATE_RFC850) ?>
         </td>
         <td>
-            <?= $this->Html->link('Edit', ['action' => 'edit', $meal->slug]) ?>
+            <?= $this->Html->link('Edit', ['action' => 'edit', $meal->ID]) ?>
             <?= $this->Form->postLink(
                 'Delete',
-                ['action' => 'delete', $meal->slug],
+                ['action' => 'delete', $meal->ID],
                 ['confirm' => 'Are you sure?'])
             ?>
         </td>

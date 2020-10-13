@@ -23,13 +23,13 @@ class MealsController extends AppController {
         }
 
         // All other actions require a slug.
-        $slug = $this->request->getParam('pass.0');
-        if (!$slug) {
+        $id = $this->request->getParam('pass.0');
+        if (!$id) {
             return false;
         }
 
         // Check that the meal belongs to the current user.
-        $meal = $this->Meals->findBySlug($slug)->first();
+        $meal = $this->Meals->findById($id)->first();
 
         return $meal->user_id === $user['id'];
     }
@@ -56,8 +56,8 @@ class MealsController extends AppController {
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($slug = null) {
-        $meal = $this->Meals->findBySlug($slug)->firstOrFail();
+    public function view($id = null) {
+        $meal = $this->Meals->findById($id)->firstOrFail();
         // debug($meal);
         // die();
         $this->set(compact('meal'));
@@ -101,8 +101,8 @@ class MealsController extends AppController {
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($slug) {
-        $meal = $this->Meals->findBySlug($slug)->firstOrFail();
+    public function edit($id) {
+        $meal = $this->Meals->findById($id)->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
             $this->Meals->patchEntity($meal, $this->request->getData(), [
                 // Added: Disable modification of user_id.
@@ -125,10 +125,10 @@ class MealsController extends AppController {
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($slug) {
+    public function delete($id) {
         $this->request->allowMethod(['post', 'delete']);
 
-        $meal = $this->Meals->findBySlug($slug)->firstOrFail();
+         $meal = $this->Meals->findById($id)->firstOrFail();
         if ($this->Meals->delete($meal)) {
             $this->Flash->success(__('The {0} meals has been deleted.', $meal->Other_details));
             return $this->redirect(['action' => 'index']);
