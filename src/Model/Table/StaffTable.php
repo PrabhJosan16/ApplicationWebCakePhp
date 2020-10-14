@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -20,16 +21,15 @@ use Cake\Validation\Validator;
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class StaffTable extends Table
-{
+class StaffTable extends Table {
+
     /**
      * Initialize method
      *
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
         $this->setTable('staff');
@@ -37,6 +37,10 @@ class StaffTable extends Table
         $this->setPrimaryKey('ID');
 
         $this->addBehavior('Timestamp');
+
+        $this->hasMany('Meals', [
+            'foreignKey' => 'Staff_ID'
+        ]);
     }
 
     /**
@@ -45,35 +49,35 @@ class StaffTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
+    public function validationDefault(Validator $validator) {
         $validator
-            ->integer('ID')
-            ->allowEmptyString('ID', null, 'create');
+                ->integer('ID')
+                ->allowEmptyString('ID', null, 'create');
 
         $validator
-            ->integer('Staff_role_code')
-            ->requirePresence('Staff_role_code', 'create')
-            ->notEmptyString('Staff_role_code');
+                ->integer('Staff_role_code')
+                ->requirePresence('Staff_role_code', 'create')
+                ->notEmptyString('Staff_role_code');
 
         $validator
-            ->scalar('First_name')
-            ->maxLength('First_name', 255)
-            ->requirePresence('First_name', 'create')
-            ->notEmptyString('First_name');
+                ->scalar('First_name')
+                ->maxLength('First_name', 255)
+                ->requirePresence('First_name', 'create')
+                ->notEmptyString('First_name');
 
         $validator
-            ->scalar('Last_name')
-            ->maxLength('Last_name', 255)
-            ->requirePresence('Last_name', 'create')
-            ->notEmptyString('Last_name');
+                ->scalar('Last_name')
+                ->maxLength('Last_name', 255)
+                ->requirePresence('Last_name', 'create')
+                ->notEmptyString('Last_name');
 
         $validator
-            ->scalar('Other_details')
-            ->maxLength('Other_details', 255)
-            ->requirePresence('Other_details', 'create')
-            ->notEmptyString('Other_details');
+                ->scalar('Other_details')
+                ->maxLength('Other_details', 255)
+                ->requirePresence('Other_details', 'create')
+                ->notEmptyString('Other_details');
 
         return $validator;
     }
+
 }
