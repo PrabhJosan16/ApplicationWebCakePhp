@@ -66,8 +66,8 @@ class StaffController extends AppController {
 //            debug($staff); die();
                 if ($this->Staff->save($staff)) {
                     $this->Flash->success(__('The staff has been saved.'));
-                    $article_slug = $this->request->session()->read('Article.slug');
-                    return $this->redirect(['controller' => 'meals', 'action' => 'view', $article_id]);
+                    $article_slug = $this->request->session()->read('Meal.slug');
+                    return $this->redirect(['controller' => 'meals', 'action' => 'view', $staff_id]);
                 }
                 $this->Flash->error(__('The comment could not be saved. Please, try again.'));
             }

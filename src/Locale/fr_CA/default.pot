@@ -1,0 +1,822 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-10-15 14:22+0000\n"
+"PO-Revision-Date: 2020-10-15 10:36-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Language: fr_CA\n"
+
+#: Controller/CustomersController.php:54 Controller/CustomersController.php:78
+msgid "The customer has been saved."
+msgstr ""
+
+#: Controller/CustomersController.php:58 Controller/CustomersController.php:82
+msgid "The customer could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CustomersController.php:99
+msgid "The customer has been deleted."
+msgstr ""
+
+#: Controller/CustomersController.php:101
+msgid "The customer could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/MealDishesController.php:54
+#: Controller/MealDishesController.php:78
+msgid "The meal dish has been saved."
+msgstr "Le repas à été sauvegarder "
+
+#: Controller/MealDishesController.php:58
+#: Controller/MealDishesController.php:82
+msgid "The meal dish could not be saved. Please, try again."
+msgstr "le repas ne pouvez pas être sauvegarder. Essayez une autre fois"
+
+#: Controller/MealDishesController.php:99
+msgid "The meal dish has been deleted."
+msgstr "Le repas à été supprimer"
+
+#: Controller/MealDishesController.php:101
+msgid "The meal dish could not be deleted. Please, try again."
+msgstr "Le repas ne pouvez pas être supprimer. Essayer une autre fois"
+
+#: Controller/MealsController.php:89
+msgid "Your meal has been saved."
+msgstr "Le repas à été sauvegarder"
+
+#: Controller/MealsController.php:92
+msgid "Unable to add your meal."
+msgstr "Le repas ne pouvez pas être ajouter"
+
+#: Controller/MealsController.php:112
+msgid "Your meal has been updated."
+msgstr "Le repas à été modifier"
+
+#: Controller/MealsController.php:115
+msgid "Unable to update your meal."
+msgstr "Le repas ne pouvez pas être modifier"
+
+#: Controller/MealsController.php:133
+msgid "The {0} meals has been deleted."
+msgstr ""
+
+#: Controller/MenuController.php:54 Controller/MenuController.php:78
+msgid "The menu has been saved."
+msgstr ""
+
+#: Controller/MenuController.php:58 Controller/MenuController.php:82
+msgid "The menu could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MenuController.php:99
+msgid "The menu has been deleted."
+msgstr ""
+
+#: Controller/MenuController.php:101
+msgid "The menu could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/MenuItemsController.php:54 Controller/MenuItemsController.php:78
+msgid "The menu item has been saved."
+msgstr ""
+
+#: Controller/MenuItemsController.php:58 Controller/MenuItemsController.php:82
+msgid "The menu item could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MenuItemsController.php:99
+msgid "The menu item has been deleted."
+msgstr ""
+
+#: Controller/MenuItemsController.php:101
+msgid "The menu item could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/RefStaffRoleController.php:54
+#: Controller/RefStaffRoleController.php:78
+msgid "The ref staff role has been saved."
+msgstr ""
+
+#: Controller/RefStaffRoleController.php:58
+#: Controller/RefStaffRoleController.php:82
+msgid "The ref staff role could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RefStaffRoleController.php:99
+msgid "The ref staff role has been deleted."
+msgstr ""
+
+#: Controller/RefStaffRoleController.php:101
+msgid "The ref staff role could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/StaffController.php:58
+msgid "Staff must be added from a meal"
+msgstr ""
+
+#: Controller/StaffController.php:68 Controller/StaffController.php:93
+msgid "The staff has been saved."
+msgstr ""
+
+#: Controller/StaffController.php:72
+msgid "The comment could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/StaffController.php:97
+msgid "The staff could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/StaffController.php:113
+msgid "The staff has been deleted."
+msgstr ""
+
+#: Controller/StaffController.php:115
+msgid "The staff could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:73 Controller/UsersController.php:96
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:77 Controller/UsersController.php:100
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:116
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:118
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Template/Customers/add.ctp:9 Template/Customers/edit.ctp:9
+#: Template/Customers/index.ctp:9 Template/Customers/index.ctp:23
+#: Template/Customers/view.ctp:9 Template/Meals/view.ctp:28
+#: Template/Menu/add.ctp:9 Template/Menu/edit.ctp:9 Template/Menu/index.ctp:9
+#: Template/Menu/index.ctp:25 Template/Menu/view.ctp:9
+#: Template/MenuItems/add.ctp:9 Template/MenuItems/edit.ctp:9
+#: Template/MenuItems/index.ctp:9 Template/MenuItems/index.ctp:24
+#: Template/MenuItems/view.ctp:9 Template/RefStaffRole/add.ctp:9
+#: Template/RefStaffRole/edit.ctp:9 Template/RefStaffRole/index.ctp:9
+#: Template/RefStaffRole/index.ctp:22 Template/RefStaffRole/view.ctp:9
+#: Template/Staff/add.ctp:9 Template/Staff/edit.ctp:9
+#: Template/Staff/index.ctp:9 Template/Staff/index.ctp:25
+#: Template/Staff/view.ctp:9 Template/Users/add.ctp:9 Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9 Template/Users/index.ctp:25
+#: Template/Users/view.ctp:9 Template/Users/view.ctp:56
+msgid "Actions"
+msgstr ""
+
+#: Template/Customers/add.ctp:10 Template/Customers/edit.ctp:16
+#: Template/Customers/view.ctp:12
+msgid "List Customers"
+msgstr ""
+
+#: Template/Customers/add.ctp:16
+msgid "Add Customer"
+msgstr ""
+
+#: Template/Customers/add.ctp:22 Template/Customers/edit.ctp:28
+#: Template/Menu/add.ctp:24 Template/Menu/edit.ctp:30
+#: Template/MenuItems/add.ctp:23 Template/MenuItems/edit.ctp:29
+#: Template/RefStaffRole/add.ctp:21 Template/RefStaffRole/edit.ctp:27
+#: Template/Staff/add.ctp:24 Template/Staff/edit.ctp:30
+#: Template/Users/add.ctp:24 Template/Users/edit.ctp:30
+#: View/Helper/FormHelper.php:2036
+msgid "Submit"
+msgstr "Entrer"
+
+#: Template/Customers/edit.ctp:11 Template/Customers/index.ctp:37
+#: Template/Meals/view.ctp:41 Template/Menu/edit.ctp:11
+#: Template/Menu/index.ctp:41 Template/MenuItems/edit.ctp:11
+#: Template/MenuItems/index.ctp:39 Template/RefStaffRole/edit.ctp:11
+#: Template/RefStaffRole/index.ctp:35 Template/Staff/edit.ctp:11
+#: Template/Staff/index.ctp:41 Template/Users/edit.ctp:11
+#: Template/Users/index.ctp:39 Template/Users/view.ctp:72
+msgid "Delete"
+msgstr "Supprimer"
+
+#: Template/Customers/edit.ctp:13 Template/Customers/index.ctp:37
+#: Template/Customers/view.ctp:11 Template/Meals/view.ctp:41
+#: Template/Menu/edit.ctp:13 Template/Menu/index.ctp:41
+#: Template/Menu/view.ctp:11 Template/MenuItems/edit.ctp:13
+#: Template/MenuItems/index.ctp:39 Template/MenuItems/view.ctp:11
+#: Template/RefStaffRole/edit.ctp:13 Template/RefStaffRole/index.ctp:35
+#: Template/RefStaffRole/view.ctp:11 Template/Staff/edit.ctp:13
+#: Template/Staff/index.ctp:41 Template/Staff/view.ctp:11
+#: Template/Users/edit.ctp:13 Template/Users/index.ctp:39
+#: Template/Users/view.ctp:11 Template/Users/view.ctp:72
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Customers/edit.ctp:22 Template/Customers/view.ctp:10
+msgid "Edit Customer"
+msgstr ""
+
+#: Template/Customers/index.ctp:10 Template/Customers/view.ctp:13
+msgid "New Customer"
+msgstr ""
+
+#: Template/Customers/index.ctp:14
+msgid "Customers"
+msgstr ""
+
+#: Template/Customers/index.ctp:35 Template/Meals/view.ctp:39
+#: Template/Menu/index.ctp:39 Template/MenuItems/index.ctp:37
+#: Template/RefStaffRole/index.ctp:33 Template/Staff/index.ctp:39
+#: Template/Users/index.ctp:37 Template/Users/view.ctp:70
+#: View/Helper/PaginatorHelper.php:1273
+msgid "View"
+msgstr "Vue"
+
+#: Template/Customers/index.ctp:36 Template/Meals/view.ctp:40
+#: Template/Menu/index.ctp:40 Template/MenuItems/index.ctp:38
+#: Template/RefStaffRole/index.ctp:34 Template/Staff/index.ctp:40
+#: Template/Users/index.ctp:38 Template/Users/view.ctp:71
+msgid "Edit"
+msgstr "Editer"
+
+#: Template/Customers/index.ctp:45 Template/Menu/index.ctp:49
+#: Template/MenuItems/index.ctp:47 Template/RefStaffRole/index.ctp:43
+#: Template/Staff/index.ctp:49 Template/Users/index.ctp:47
+msgid "first"
+msgstr ""
+
+#: Template/Customers/index.ctp:46 Template/Menu/index.ctp:50
+#: Template/MenuItems/index.ctp:48 Template/RefStaffRole/index.ctp:44
+#: Template/Staff/index.ctp:50 Template/Users/index.ctp:48
+msgid "previous"
+msgstr ""
+
+#: Template/Customers/index.ctp:48 Template/Menu/index.ctp:52
+#: Template/MenuItems/index.ctp:50 Template/RefStaffRole/index.ctp:46
+#: Template/Staff/index.ctp:52 Template/Users/index.ctp:50
+msgid "next"
+msgstr ""
+
+#: Template/Customers/index.ctp:49 Template/Menu/index.ctp:53
+#: Template/MenuItems/index.ctp:51 Template/RefStaffRole/index.ctp:47
+#: Template/Staff/index.ctp:53 Template/Users/index.ctp:51
+msgid "last"
+msgstr ""
+
+#: Template/Customers/index.ctp:51 Template/Menu/index.ctp:55
+#: Template/MenuItems/index.ctp:53 Template/RefStaffRole/index.ctp:49
+#: Template/Staff/index.ctp:55 Template/Users/index.ctp:53
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+
+#: Template/Customers/view.ctp:11
+msgid "Delete Customer"
+msgstr ""
+
+#: Template/Customers/view.ctp:20
+msgid "Customer Details"
+msgstr ""
+
+#: Template/Customers/view.ctp:24
+msgid "Contact"
+msgstr ""
+
+#: Template/Customers/view.ctp:28 Template/Menu/view.ctp:28
+#: Template/MenuItems/view.ctp:28 Template/RefStaffRole/view.ctp:24
+#: Template/Staff/view.ctp:32 Template/Users/view.ctp:47
+msgid "ID"
+msgstr ""
+
+#: Template/Customers/view.ctp:32 Template/Menu/view.ctp:40
+#: Template/MenuItems/view.ctp:36 Template/RefStaffRole/view.ctp:28
+#: Template/Staff/view.ctp:40 Template/Users/view.ctp:34
+#: Template/Users/view.ctp:54
+msgid "Created"
+msgstr ""
+
+#: Template/Customers/view.ctp:36 Template/Menu/view.ctp:44
+#: Template/MenuItems/view.ctp:40 Template/RefStaffRole/view.ctp:32
+#: Template/Staff/view.ctp:44 Template/Users/view.ctp:38
+#: Template/Users/view.ctp:55
+msgid "Modified"
+msgstr ""
+
+#: Template/Layout/error.ctp:36 Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:44
+msgid "Back"
+msgstr ""
+
+#: Template/Meals/add.ctp:10 Template/Meals/edit.ctp:9
+msgid "Save Meal"
+msgstr "Sauvegarder Repas"
+
+#: Template/Meals/view.ctp:13 Template/Staff/index.ctp:10
+#: Template/Staff/view.ctp:13
+msgid "New Staff"
+msgstr ""
+
+#: Template/Meals/view.ctp:16
+msgid "Related Staff"
+msgstr ""
+
+#: Template/Menu/add.ctp:10 Template/Menu/edit.ctp:16 Template/Menu/view.ctp:12
+msgid "List Menu"
+msgstr ""
+
+#: Template/Menu/add.ctp:16
+msgid "Add Menu"
+msgstr ""
+
+#: Template/Menu/edit.ctp:22 Template/Menu/view.ctp:10
+msgid "Edit Menu"
+msgstr ""
+
+#: Template/Menu/index.ctp:10 Template/Menu/view.ctp:13
+msgid "New Menu"
+msgstr ""
+
+#: Template/Menu/index.ctp:14
+msgid "Menu"
+msgstr ""
+
+#: Template/Menu/view.ctp:11
+msgid "Delete Menu"
+msgstr ""
+
+#: Template/Menu/view.ctp:20
+msgid "Menu Name"
+msgstr ""
+
+#: Template/Menu/view.ctp:24 Template/MenuItems/view.ctp:24
+#: Template/Staff/view.ctp:28 Template/Users/view.ctp:53
+msgid "Other Details"
+msgstr ""
+
+#: Template/Menu/view.ctp:32
+msgid "Available Date From"
+msgstr ""
+
+#: Template/Menu/view.ctp:36
+msgid "Available Date To"
+msgstr ""
+
+#: Template/MenuItems/add.ctp:10 Template/MenuItems/edit.ctp:16
+#: Template/MenuItems/view.ctp:12
+msgid "List Menu Items"
+msgstr ""
+
+#: Template/MenuItems/add.ctp:16
+msgid "Add Menu Item"
+msgstr ""
+
+#: Template/MenuItems/edit.ctp:22 Template/MenuItems/view.ctp:10
+msgid "Edit Menu Item"
+msgstr ""
+
+#: Template/MenuItems/index.ctp:10 Template/MenuItems/view.ctp:13
+msgid "New Menu Item"
+msgstr ""
+
+#: Template/MenuItems/index.ctp:14
+msgid "Menu Items"
+msgstr ""
+
+#: Template/MenuItems/view.ctp:11
+msgid "Delete Menu Item"
+msgstr ""
+
+#: Template/MenuItems/view.ctp:20
+msgid "Menu Item Name"
+msgstr ""
+
+#: Template/MenuItems/view.ctp:32
+msgid "Menu ID"
+msgstr ""
+
+#: Template/RefStaffRole/add.ctp:10 Template/RefStaffRole/edit.ctp:16
+#: Template/RefStaffRole/view.ctp:12
+msgid "List Ref Staff Role"
+msgstr ""
+
+#: Template/RefStaffRole/add.ctp:16
+msgid "Add Ref Staff Role"
+msgstr ""
+
+#: Template/RefStaffRole/edit.ctp:22 Template/RefStaffRole/view.ctp:10
+msgid "Edit Ref Staff Role"
+msgstr ""
+
+#: Template/RefStaffRole/index.ctp:10 Template/RefStaffRole/view.ctp:13
+msgid "New Ref Staff Role"
+msgstr ""
+
+#: Template/RefStaffRole/index.ctp:14
+msgid "Ref Staff Role"
+msgstr ""
+
+#: Template/RefStaffRole/view.ctp:11
+msgid "Delete Ref Staff Role"
+msgstr ""
+
+#: Template/RefStaffRole/view.ctp:20
+msgid "Staff Role Description"
+msgstr ""
+
+#: Template/Staff/add.ctp:10 Template/Staff/edit.ctp:16
+#: Template/Staff/view.ctp:12
+msgid "List Staff"
+msgstr ""
+
+#: Template/Staff/add.ctp:16
+msgid "Add Staff"
+msgstr ""
+
+#: Template/Staff/edit.ctp:22 Template/Staff/view.ctp:10
+msgid "Edit Staff"
+msgstr ""
+
+#: Template/Staff/index.ctp:14
+msgid "Staff"
+msgstr ""
+
+#: Template/Staff/view.ctp:11
+msgid "Delete Staff"
+msgstr ""
+
+#: Template/Staff/view.ctp:20
+msgid "First Name"
+msgstr ""
+
+#: Template/Staff/view.ctp:24
+msgid "Last Name"
+msgstr ""
+
+#: Template/Staff/view.ctp:36
+msgid "Staff Role Code"
+msgstr ""
+
+#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr ""
+
+#: Template/Users/add.ctp:11 Template/Users/edit.ctp:17
+#: Template/Users/index.ctp:11 Template/Users/view.ctp:14
+msgid "List Meals"
+msgstr "Lister Repas"
+
+#: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
+#: Template/Users/index.ctp:12 Template/Users/view.ctp:15
+msgid "New Meal"
+msgstr "Nouveau Repas"
+
+#: Template/Users/add.ctp:18
+msgid "Add User"
+msgstr "Ajouter un Utilisateur"
+
+#: Template/Users/edit.ctp:24 Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr "Editer un Utilisateur"
+
+#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+msgid "New User"
+msgstr "Nouveau Utilisateur"
+
+#: Template/Users/index.ctp:16
+msgid "Users"
+msgstr "Utilisateur"
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr "Supprimer Utilisateur"
+
+#: Template/Users/view.ctp:22
+msgid "Email"
+msgstr "Courriel"
+
+#: Template/Users/view.ctp:26
+msgid "Password"
+msgstr "Mot de passe"
+
+#: Template/Users/view.ctp:30
+msgid "Id"
+msgstr ""
+
+#: Template/Users/view.ctp:43
+msgid "Related Meals"
+msgstr ""
+
+#: Template/Users/view.ctp:48
+msgid "User Id"
+msgstr ""
+
+#: Template/Users/view.ctp:49
+msgid "Customer ID"
+msgstr ""
+
+#: Template/Users/view.ctp:50
+msgid "Staff ID"
+msgstr ""
+
+#: Template/Users/view.ctp:51
+msgid "Date Of Meal"
+msgstr "Date du repas"
+
+#: Template/Users/view.ctp:52
+msgid "Cost Of Meal"
+msgstr "coût du repas"
+
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr ""
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr ""
+
+#: Controller/Component/AuthComponent.php:502
+msgid "You are not authorized to access that location."
+msgstr ""
+
+#: Controller/Component/CsrfComponent.php:181
+#: Http/Middleware/CsrfProtectionMiddleware.php:228
+msgid "Missing CSRF token cookie"
+msgstr ""
+
+#: Controller/Component/CsrfComponent.php:185
+#: Http/Middleware/CsrfProtectionMiddleware.php:232
+msgid "CSRF token mismatch."
+msgstr ""
+
+#: Error/ExceptionRenderer.php:301
+msgid "Not Found"
+msgstr ""
+
+#: Error/ExceptionRenderer.php:303
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: Http/Response.php:2677
+msgid "The requested file contains `..` and will not be read."
+msgstr ""
+
+#: Http/Response.php:2698
+msgid "The requested file was not found"
+msgstr ""
+
+#: I18n/Number.php:106
+msgid "{0,number,#,###.##} KB"
+msgstr ""
+
+#: I18n/Number.php:108
+msgid "{0,number,#,###.##} MB"
+msgstr ""
+
+#: I18n/Number.php:110
+msgid "{0,number,#,###.##} GB"
+msgstr ""
+
+#: I18n/Number.php:112
+msgid "{0,number,#,###.##} TB"
+msgstr ""
+
+#: I18n/Number.php:104
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:114
+msgid "just now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:154 I18n/RelativeTimeFormatter.php:332
+msgid "about a day ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:155 I18n/RelativeTimeFormatter.php:333
+msgid "about a week ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:156 I18n/RelativeTimeFormatter.php:334
+msgid "about a month ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:157 I18n/RelativeTimeFormatter.php:335
+msgid "about a year ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:171 I18n/RelativeTimeFormatter.php:346
+msgid "in about a day"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:172 I18n/RelativeTimeFormatter.php:347
+msgid "in about a week"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:173 I18n/RelativeTimeFormatter.php:348
+msgid "in about a month"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:174 I18n/RelativeTimeFormatter.php:349
+msgid "in about a year"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:370
+msgid "%s ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:47 I18n/RelativeTimeFormatter.php:126
+#: I18n/RelativeTimeFormatter.php:316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:51 I18n/RelativeTimeFormatter.php:129
+#: I18n/RelativeTimeFormatter.php:319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:57 I18n/RelativeTimeFormatter.php:132
+#: I18n/RelativeTimeFormatter.php:322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:59 I18n/RelativeTimeFormatter.php:135
+#: I18n/RelativeTimeFormatter.php:325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:64 I18n/RelativeTimeFormatter.php:138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:68 I18n/RelativeTimeFormatter.php:141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:72 I18n/RelativeTimeFormatter.php:144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ORM/RulesChecker.php:56
+msgid "This value is already in use"
+msgstr ""
+
+#: ORM/RulesChecker.php:103
+msgid "This value does not exist"
+msgstr ""
+
+#: ORM/RulesChecker.php:127
+msgid "The count does not match {0}{1}"
+msgstr ""
+
+#: Utility/Text.php:933
+msgid "and"
+msgstr ""
+
+#: Validation/Validator.php:2510 View/Form/ArrayContext.php:226
+msgid "This field is required"
+msgstr ""
+
+#: Validation/Validator.php:2532
+msgid "This field cannot be left empty"
+msgstr ""
+
+#: Validation/Validator.php:2691
+msgid "The provided value is invalid"
+msgstr ""
+
+#: View/Helper/FormHelper.php:1114
+msgid "Edit {0}"
+msgstr ""
+
+#: View/Helper/FormHelper.php:1116
+msgid "New {0}"
+msgstr ""
+
+#: View/Helper/HtmlHelper.php:831
+msgid "Home"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:539
+msgid "January"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "February"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "March"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:542
+msgid "April"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:543
+msgid "May"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:544
+msgid "June"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:545
+msgid "July"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:546
+msgid "August"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:547
+msgid "September"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:548
+msgid "October"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:549
+msgid "November"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:550
+msgid "December"
+msgstr ""

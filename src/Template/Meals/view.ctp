@@ -8,6 +8,7 @@
 
 <?php
     $this->request->session()->write('Meals.id', $meal->id);
+    //$this->request->session()->write('Meals.slug', $meal->slug);
     
     echo $this->Html->link(__('New Staff'), ['controller' => 'Staff', 'action' => 'add']);
     ?></p>

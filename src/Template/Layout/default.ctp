@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -58,6 +59,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </li>
                     <li>
                         <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]); ?>
+                    </li>
+                    <li>
+                        <?= $this->Html->link('Espanol', ['action' => 'changeLang', 'es_US'], ['escape' => false]); ?>
                     </li>
                     <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
                     <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>

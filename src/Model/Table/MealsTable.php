@@ -20,6 +20,7 @@ class MealsTable extends Table {
      */
     public function initialize(array $config) {
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Translate', ['fields' => ['Other_details']]);
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
