@@ -45,6 +45,8 @@ class AppController extends Controller {
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
         ]);
+        
+        $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
 
         /*

@@ -28,6 +28,11 @@ class MealsTable extends Table {
         $this->hasMany('Staff', [
             'foreignKey' => 'meals_id'
         ]);
+         $this->belongsToMany('Tags', [
+            'foreignKey' => 'meal_id',
+            'targetForeignKey' => 'tag_id',
+            'joinTable' => 'meals_tags',
+        ]);
     }
 
     public function beforeSave($event, $entity, $options) {

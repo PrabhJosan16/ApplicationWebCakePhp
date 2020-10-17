@@ -14,6 +14,11 @@ namespace App\Controller;
  * @method \App\Model\Entity\Meal[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class MealsController extends AppController {
+    
+        public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['tags']);
+    }
 
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
@@ -43,7 +48,7 @@ class MealsController extends AppController {
         $this->loadComponent('Paginator');
         $meals = $this->Paginator->paginate($this->Meals->find(
                         'all', [
-                    'contain' => ['Users'],
+                    'contain' => ['Users', 'Tags'],
         ]));
 
         $this->set(compact('meals'));
@@ -72,17 +77,12 @@ class MealsController extends AppController {
         $meal = $this->Meals->newEntity();
         if ($this->request->is('post')) {
             $meal = $this->Meals->patchEntity($meal, $this->request->getData());
-
             // Hardcoding the user_id is temporary, and will be removed later
             // when we build authentication out.
             //debug($meal);
             //die();
-
-
             $meal->user_id = $this->Auth->user('id');
             //$meal->user_id = 3;
-
-
             // debug($meal);
             // die();
             if ($this->Meals->save($meal)) {
@@ -91,6 +91,11 @@ class MealsController extends AppController {
             }
             $this->Flash->error(__('Unable to add your meal.'));
         }
+        // Get a list of tags.
+        $tags = $this->Meals->Tags->find('list');
+
+        // Set tags to the view context
+        $this->set('tags', $tags);
         $this->set('meal', $meal);
     }
 
@@ -102,7 +107,7 @@ class MealsController extends AppController {
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function edit($id) {
-        $meal = $this->Meals->findById($id)->firstOrFail();
+        $meal = $this->Meals->findById($id)->contain('Tags')->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
             $this->Meals->patchEntity($meal, $this->request->getData(), [
                 // Added: Disable modification of user_id.
@@ -114,6 +119,11 @@ class MealsController extends AppController {
             }
             $this->Flash->error(__('Unable to update your meal.'));
         }
+        // Get a list of tags.
+        $tags = $this->Meals->Tags->find('list');
+
+        // Set tags to the view context
+        $this->set('tags', $tags);
 
         $this->set('meal', $meal);
     }
@@ -128,7 +138,7 @@ class MealsController extends AppController {
     public function delete($id) {
         $this->request->allowMethod(['post', 'delete']);
 
-         $meal = $this->Meals->findById($id)->firstOrFail();
+        $meal = $this->Meals->findById($id)->firstOrFail();
         if ($this->Meals->delete($meal)) {
             $this->Flash->success(__('The {0} meals has been deleted.', $meal->Other_details));
             return $this->redirect(['action' => 'index']);
