@@ -54,10 +54,10 @@ class StaffController extends AppController {
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
     public function add() {
-        if ($this->request->session()->read('Meal.id') == false) {
+       /* if ($this->request->session()->read('Meal.id') == false) {
             $this->Flash->error(__('Staff must be added from a meal'));
             return $this->redirect(['controller' => 'meals', 'action' => 'index']);
-        } else {
+        } else {*/
             $staff = $this->Staff->newEntity();
             if ($this->request->is('post')) {
                 $staff = $this->Staff->patchEntity($staff, $this->request->getData());
@@ -73,7 +73,7 @@ class StaffController extends AppController {
             }
             $meals = $this->Staff->Meals->find('list', ['limit' => 200]);
             $this->set(compact('staff', 'meals'));
-        }
+       // }
     }
 
     /**

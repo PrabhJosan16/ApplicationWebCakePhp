@@ -8,16 +8,19 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Files'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Meal'), ['controller' => 'Meals', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Meal'), ['controller' => 'Meals', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="files form large-9 medium-8 columns content">
-    <?= $this->Form->create($file) ?>
+    <?= $this->Form->create($file, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Add File') ?></legend>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('path');
+            echo $this->Form->control('name', ['type' => 'file']);
+//            echo $this->Form->control('path');
             echo $this->Form->control('status');
+            echo $this->Form->control('meals._ids', ['options' => $meals]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

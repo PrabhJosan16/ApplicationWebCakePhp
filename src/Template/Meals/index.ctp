@@ -8,6 +8,7 @@
         <th>Price</th>
         <th>Date</th>
         <th>By</th>
+        <th>File</th>
         <th>Created</th>
         <th>Action</th>
     </tr>
@@ -27,6 +28,17 @@
         </td>
         <td>
             <?= $meal->user_id ?>
+        </td>
+        <td><?php
+                        if (isset($meal->files[0])) {
+                            echo $this->Html->image($meal->files[0]->path . $meal->files[0]->name, [
+                                "alt" => $meal->files[0]->name,
+                                "width" => "220px",
+                                "height" => "150px",
+                                'url' => ['controller' => 'Files', 'action' => 'view', $meal->files[0]->id]
+                            ]);
+                        }
+                        ?>
         </td>
         <td>
             <?= $meal->created->format(DATE_RFC850) ?>

@@ -42,8 +42,8 @@ class FilesFixture extends TestFixture
                 'id' => 1,
                 'name' => 'Lorem ipsum dolor sit amet',
                 'path' => 'Lorem ipsum dolor sit amet',
-                'created' => '2020-10-17 21:28:24',
-                'modified' => '2020-10-17 21:28:24',
+                'created' => '2020-10-18 17:38:29',
+                'modified' => '2020-10-18 17:38:29',
                 'status' => 1,
             ],
         ];

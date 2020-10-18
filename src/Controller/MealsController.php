@@ -14,8 +14,8 @@ namespace App\Controller;
  * @method \App\Model\Entity\Meal[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class MealsController extends AppController {
-    
-        public function initialize() {
+
+    public function initialize() {
         parent::initialize();
         $this->Auth->allow(['tags']);
     }
@@ -48,7 +48,7 @@ class MealsController extends AppController {
         $this->loadComponent('Paginator');
         $meals = $this->Paginator->paginate($this->Meals->find(
                         'all', [
-                    'contain' => ['Users', 'Tags'],
+                    'contain' => ['Users', 'Tags', 'Files'],
         ]));
 
         $this->set(compact('meals'));
@@ -93,10 +93,12 @@ class MealsController extends AppController {
         }
         // Get a list of tags.
         $tags = $this->Meals->Tags->find('list');
+        $files = $this->Meals->Files->find('list');
 
         // Set tags to the view context
         $this->set('tags', $tags);
         $this->set('meal', $meal);
+        $this->set('files', $files);
     }
 
     /**
@@ -107,7 +109,7 @@ class MealsController extends AppController {
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function edit($id) {
-        $meal = $this->Meals->findById($id)->contain('Tags')->firstOrFail();
+        $meal = $this->Meals->findById($id)->contain('Tags', 'Files')->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
             $this->Meals->patchEntity($meal, $this->request->getData(), [
                 // Added: Disable modification of user_id.
@@ -121,10 +123,11 @@ class MealsController extends AppController {
         }
         // Get a list of tags.
         $tags = $this->Meals->Tags->find('list');
+        $files = $this->Meals->Files->find('list');
 
         // Set tags to the view context
         $this->set('tags', $tags);
-
+        $this->set('files', $files);
         $this->set('meal', $meal);
     }
 
