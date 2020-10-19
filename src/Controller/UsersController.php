@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Utility\Text;
+use Cake\Mailer\Email;
 
 /**
  * Users Controller
@@ -15,8 +17,8 @@ class UsersController extends AppController {
 
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['logout', 'add']);
-       // $this->Auth->deny(['index', 'view']);
+        $this->Auth->allow(['logout', 'add', 'confirm']);
+        // $this->Auth->deny(['index', 'view']);
     }
 
     public function login() {
@@ -29,7 +31,24 @@ class UsersController extends AppController {
             $this->Flash->error('Your username or password is incorrect.');
         }
     }
+    
+    public function sendConfirmEmail($user){
+        $email = new Email('default');
+        $email->to($user->email)->subject(_('Confirm your Email'))->send("http://" . $_SERVER['HTTP_HOST'] . $this->request->webroot . "users/confirm/" . $user->uuid);
+        
+    }
 
+    public function confirm($uuid){
+        $user = $this->Users->findByUuid($uuid)->firstOrFail();
+        $user->confirmed = true;
+        if($this->Users->save($user)){
+            $this->Flash->success(__('Thank you') . '.' . ('Your Email has been confirmed'));
+            return $this->redirect(['action' => 'index']);
+            
+        }
+        $this->Flash->error(__('The confirmation could not be saved. Please, try again.'));
+        
+    }   
     public function logout() {
         $this->Flash->success('You are now logged out.');
         return $this->redirect($this->Auth->logout());
@@ -70,9 +89,11 @@ class UsersController extends AppController {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
+            $user->uuid = Text::uuid();
+            $user->confirmed = false;
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-
+                $this->sendConfirmEmail($user);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
@@ -95,7 +116,6 @@ class UsersController extends AppController {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));

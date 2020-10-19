@@ -27,7 +27,7 @@
             <?= $meal->Date_of_meal ?>
         </td>
         <td>
-            <?= $meal->user_id ?>
+            <?= $meal->has('user') ? $this->Html->link($meal->user->email, ['controller' => 'Users', 'action' => 'view', $meal->user->id]) : '' ?>
         </td>
         <td><?php
                         if (isset($meal->files[0])) {
