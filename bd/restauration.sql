@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 17, 2020 at 09:43 PM
+-- Generation Time: Oct 19, 2020 at 09:27 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -63,7 +63,11 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
-(3, 'egtwretgertretertreter.PNG', 'Home/index/', '2020-10-17 21:38:40', '2020-10-17 21:38:40', 1);
+(6, 'steak.jpg', 'files/add/', '2020-10-18 19:57:56', '2020-10-18 19:57:56', 1),
+(7, 'Frites.webp', 'files/add/', '2020-10-18 20:17:09', '2020-10-18 20:17:09', 1),
+(8, 'poutine.jpg', 'files/add/', '2020-10-18 20:17:37', '2020-10-18 20:17:37', 1),
+(9, 'pizza.jpeg', 'files/add/', '2020-10-18 20:18:22', '2020-10-18 20:18:22', 1),
+(10, 'bouffet.jpg', 'files/add/', '2020-10-18 20:22:20', '2020-10-18 20:22:20', 1);
 
 -- --------------------------------------------------------
 
@@ -87,9 +91,10 @@ CREATE TABLE `i18n` (
 INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
 (11, 'fr_CA', 'Meals', 1, 'Other_details', 'Ce si est un steak'),
 (12, 'es_US', 'Meals', 1, 'Other_details', 'esto es un bistec es'),
-(13, 'en_CA', 'Meals', 13, 'Other_details', 'asd'),
-(14, 'en_CA', 'Meals', 14, 'Other_details', 'tets'),
-(15, 'en_CA', 'Meals', 15, 'Other_details', 'une autrwe test');
+(16, 'en_CA', 'Meals', 18, 'Other_details', 'Bouffet 5 étoiles'),
+(17, 'en_CA', 'Meals', 22, 'Other_details', 'Grande Poutine'),
+(18, 'fr_CA', 'Meals', 22, 'Other_details', 'Grande Poutine'),
+(19, 'es_US', 'Meals', 22, 'Other_details', 'PATATAS BRAVAS');
 
 -- --------------------------------------------------------
 
@@ -115,15 +120,36 @@ CREATE TABLE `meals` (
 --
 
 INSERT INTO `meals` (`ID`, `user_id`, `Customer_ID`, `Staff_ID`, `slug`, `Date_of_meal`, `Cost_of_meal`, `Other_details`, `created`, `modified`) VALUES
-(1, 3, 1, 1, '', '2020-10-10 19:43:15', 15, 'this is a steak', '2020-10-10 00:00:00', '2020-10-17 18:51:53'),
-(3, 3, 1, 1, '', '2020-10-11 20:25:53', 5, 'poutine', '2020-10-11 00:00:00', '2020-10-17 18:57:21'),
-(4, 3, 1, 1, '', '2020-10-12 19:14:00', 15, 'Pizza', '2020-10-12 19:14:51', '2020-10-12 19:14:51'),
-(7, 3, NULL, NULL, '', '2020-10-12 19:56:40', 75, 'Bouffet', '2020-10-12 19:56:40', '2020-10-12 19:56:40'),
-(9, 3, NULL, NULL, '', '2020-10-13 14:19:02', 15, 'Pizza', '2020-10-13 14:19:02', '2020-10-13 14:19:02'),
-(12, 3, NULL, NULL, 'sefgrthgftgdrs', '2020-10-16 15:11:03', 15, 'sefgrthgftgdrs', '2020-10-16 15:11:03', '2020-10-17 18:43:32'),
-(13, 3, NULL, NULL, 'asd', '2020-10-17 19:02:37', 2, NULL, '2020-10-17 19:02:37', '2020-10-17 19:02:37'),
-(14, 3, NULL, NULL, 'tets', '2020-10-17 19:02:47', 123, NULL, '2020-10-17 19:02:47', '2020-10-17 19:02:53'),
-(15, 3, NULL, NULL, 'une-autrwe-test', '2020-10-17 19:03:40', 12, NULL, '2020-10-17 19:03:40', '2020-10-17 19:03:40');
+(1, 3, 1, 1, '', '2020-10-10 19:43:15', 15, 'this is a steak', '2020-10-10 00:00:00', '2020-10-18 20:12:37'),
+(3, 3, 1, 1, '', '2020-10-11 20:25:53', 5, 'poutine', '2020-10-11 00:00:00', '2020-10-18 20:18:58'),
+(9, 3, NULL, NULL, '', '2020-10-13 14:19:02', 15, 'Pizza', '2020-10-13 14:19:02', '2020-10-18 20:18:41'),
+(16, 3, NULL, NULL, 'Frites', '2020-10-18 16:23:09', 5, 'Frites', '2020-10-18 16:23:09', '2020-10-18 20:18:31'),
+(18, 3, NULL, NULL, 'Bouffet-5-etoiles', '2020-10-18 20:22:45', 55, NULL, '2020-10-18 20:22:45', '2020-10-18 20:22:45'),
+(22, 5, NULL, NULL, 'Grande-Poutine', '2020-10-19 21:24:54', 9, 'Large Poutine', '2020-10-19 21:24:54', '2020-10-19 21:26:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `meals_files`
+--
+
+CREATE TABLE `meals_files` (
+  `id` int(11) NOT NULL,
+  `meal_id` int(11) NOT NULL,
+  `file_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `meals_files`
+--
+
+INSERT INTO `meals_files` (`id`, `meal_id`, `file_id`) VALUES
+(5, 1, 6),
+(6, 16, 7),
+(7, 9, 9),
+(8, 3, 8),
+(9, 18, 10),
+(13, 22, 8);
 
 -- --------------------------------------------------------
 
@@ -142,9 +168,11 @@ CREATE TABLE `meals_tags` (
 
 INSERT INTO `meals_tags` (`meal_id`, `tag_id`) VALUES
 (1, 1),
-(14, 1),
-(15, 1),
-(3, 2);
+(9, 1),
+(18, 1),
+(3, 2),
+(16, 2),
+(22, 2);
 
 -- --------------------------------------------------------
 
@@ -234,7 +262,9 @@ CREATE TABLE `staff` (
 INSERT INTO `staff` (`ID`, `Staff_role_code`, `First_name`, `Last_name`, `Other_details`, `created`, `modified`) VALUES
 (1, 1, 'admin', 'admin', 'admin', '2020-10-10 00:00:00', '2020-10-10 00:00:00'),
 (2, 1, 'Prabh', 'Josan', 'Etudiant', '2020-10-14 22:28:39', '2020-10-14 22:28:39'),
-(3, 1, 'Prabh', 'Josan', 'Etudiant', '2020-10-14 22:29:09', '2020-10-14 22:29:09');
+(3, 1, 'Prabh', 'Josan', 'Etudiant', '2020-10-14 22:29:09', '2020-10-14 22:29:09'),
+(4, 1, 'allo', 'bye', 'yes', '2020-10-18 16:25:55', '2020-10-18 16:25:55'),
+(5, 1, 'allo', 'bye', 'yes', '2020-10-18 16:26:17', '2020-10-18 16:26:17');
 
 -- --------------------------------------------------------
 
@@ -267,6 +297,8 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `confirmed` tinyint(1) NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -275,11 +307,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `created`, `modified`) VALUES
-(3, 'admin@admin.com', '$2y$10$guR1XZnYUZp8QFWTtrgsVukC0/mpGrPP8d/rAoMZIk4e/2w458xl2', '2020-10-02 19:46:41', '2020-10-11 21:46:38'),
-(4, 'prabhjosan16@gmail.com', '$2y$10$ayiMvPJNfH9BFgUtle3AwOCPfwaw1QZ1ouP.SDPj7I66kjmdRAO8m', '2020-10-05 13:36:15', '2020-10-05 13:36:15'),
-(5, 'cake@cms.com', '$2y$10$ywXZTBu2AoS9hp4ypXCubOsaovYQVx9eXBpqulyzR2xwjOE1XWUQi', '2020-10-11 22:01:03', '2020-10-11 22:01:03'),
-(6, 'cake@cake.com', '$2y$10$v8Wm2qUjN/uDCQB.XgrGk.qVFSUkU3kTr1Injo.U4v1BwR175gPZe', '2020-10-14 21:01:06', '2020-10-14 21:01:06');
+INSERT INTO `users` (`id`, `email`, `password`, `uuid`, `confirmed`, `created`, `modified`) VALUES
+(3, 'admin@admin.com', '$2y$10$guR1XZnYUZp8QFWTtrgsVukC0/mpGrPP8d/rAoMZIk4e/2w458xl2', 'a6f2ca00-aafe-48aa-8ca4-03051da5f0ba', 0, '2020-10-02 19:46:41', '2020-10-19 18:17:12'),
+(5, 'cake@cms.com', '$2y$10$ywXZTBu2AoS9hp4ypXCubOsaovYQVx9eXBpqulyzR2xwjOE1XWUQi', 'd9c96552-3954-4735-8664-b85ec90fa4cc', 0, '2020-10-11 22:01:03', '2020-10-19 18:17:30'),
+(6, 'cake@cake.com', '$2y$10$v8Wm2qUjN/uDCQB.XgrGk.qVFSUkU3kTr1Injo.U4v1BwR175gPZe', 'b3d4b767-da23-4e4f-b327-2ca958a472c6', 0, '2020-10-14 21:01:06', '2020-10-19 18:17:32'),
+(12, 'prabhjosan16@gmail.com', '$2y$10$3rrzoNEUt.5Dfda0F6xpZeC1JyW1jtKprVKdiz5w15NwZiwu3qKye', 'ab80e36f-c293-4736-bb5f-9b1c4d5fceb0', 1, '2020-10-19 18:58:06', '2020-10-19 19:01:38');
 
 --
 -- Indexes for dumped tables
@@ -313,6 +345,14 @@ ALTER TABLE `meals`
   ADD KEY `articles_ibfk_1` (`user_id`),
   ADD KEY `FK_Customer_Meals` (`Customer_ID`),
   ADD KEY `FK_Staff_Meals` (`Staff_ID`);
+
+--
+-- Indexes for table `meals_files`
+--
+ALTER TABLE `meals_files`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `meal_id` (`meal_id`),
+  ADD KEY `file_id` (`file_id`);
 
 --
 -- Indexes for table `meals_tags`
@@ -380,19 +420,25 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `i18n`
 --
 ALTER TABLE `i18n`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `meals`
 --
 ALTER TABLE `meals`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `meals_files`
+--
+ALTER TABLE `meals_files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `menu`
@@ -416,7 +462,7 @@ ALTER TABLE `ref_staff_role`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tags`
@@ -428,7 +474,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
