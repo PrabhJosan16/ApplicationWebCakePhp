@@ -30,5 +30,6 @@ class Meal extends Entity
         '*' => true,
         'id' => true,
         'slug' => true,
+        'meal_name_id' => true,
     ];
 }

@@ -38,6 +38,10 @@ class MealsTable extends Table {
             'targetForeignKey' => 'file_id',
             'joinTable' => 'meals_files',
         ]);
+          $this->belongsTo('MealsName', [
+            'foreignKey' => 'meal_name_id',
+            'joinType' => 'INNER',
+            ]);
     }
 
     public function beforeSave($event, $entity, $options) {
