@@ -17,7 +17,13 @@ echo $this->Html->script('Meals/add_edit/mealsNameAutocomplete', ['block' => 'sc
         <?php
 //            echo $this->Form->control('user_id', ['options' => $users]);
          echo $this->Form->control('Cost_of_meal');
-         echo $this->Form->control('meal_name_id', ['label' => __('City') . ' (' . __('Autocomplete demo') . ')', 'type' => 'text', 'id' => 'autocomplete']);
+         echo $this->Form->control('meal_name_id', ['label' => ('meal_name_id') ,  'type' => 'hidden']);
+         ?>
+         <div class="input text">
+         <label for="autocomplete"><?=__("Meal"). ' (' .__('Autocomplete'). ')' ?></label>
+         <input id="autocomplete" type="text">
+        </div>
+        <?php
          echo $this->Form->control('Other_details', ['rows' => '3']);
         echo $this->Form->control('tags._ids', ['options' => $tags]);
         echo $this->Form->control('files._ids', ['options' => $files]);

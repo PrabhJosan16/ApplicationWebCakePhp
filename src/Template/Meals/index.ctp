@@ -17,6 +17,7 @@
 
 <?php foreach ($meals as $meal): ?>
     <tr>
+      
         <td>
             <?= $this->Html->link($meal->Other_details, ['action' => 'view', $meal->ID]) ?>
         </td>

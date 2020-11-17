@@ -25,5 +25,10 @@ class MealName extends Entity
     protected $_accessible = [
         'meal_name' => true,
         'meals' => true,
+        'type_meal_id' => true,
+        'name_type_id' => true,
+        'meal_name' => true,
+        'no_type' => true,
+        'name_meal' => true
     ];
 }

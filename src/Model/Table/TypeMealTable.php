@@ -33,7 +33,7 @@ class TypeMealTable extends Table
         parent::initialize($config);
 
         $this->setTable('type_meal');
-        $this->setDisplayField('id');
+        $this->setDisplayField('name_meal');
         $this->setPrimaryKey('id');
 
         $this->hasMany('MealName', [

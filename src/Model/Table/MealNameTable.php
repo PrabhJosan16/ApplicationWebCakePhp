@@ -33,8 +33,8 @@ class MealNameTable extends Table
         parent::initialize($config);
 
         $this->setTable('meal_name');
-        $this->setDisplayField('ID');
-        $this->setPrimaryKey('ID');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->hasMany('Meals', [
             'foreignKey' => 'meal_name_id',
