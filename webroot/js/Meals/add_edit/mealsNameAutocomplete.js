@@ -1,3 +1,5 @@
+/* global urlToAutocompleteAction */
+
 (function ($) {
     // Get the path to action from CakePHP
     var autoCompleteSource = urlToAutocompleteAction;

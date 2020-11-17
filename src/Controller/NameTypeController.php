@@ -24,7 +24,7 @@ class NameTypeController extends AppController
         $type_meal_id = $this->request->query('type_meal_id');
 
         $nameType = $this->NameType->find('all', [
-            'conditions' => ['$nameType.type_meal_id' => $type_meal_id],
+            'conditions' => ['$NameType.type_meal_id' => $type_meal_id],
         ]);
         $this->set('nameType', $nameType);
         $this->set('_serialize', ['nameType']);

@@ -1,5 +1,3 @@
-/* global urlToLinkedListFilter */
-    // The path to action from CakePHP is in urlToLinkedListFilter
 $(document).ready(function () {
     
     $('#type-meal-id').on('change', function () {
@@ -11,12 +9,12 @@ $(document).ready(function () {
                 url: urlToLinkedListFilter,
                 data: 'type_meal_id=' + TypeMealId,
 
-                success: function (TypeNameMe) {
+                success: function (TypeName) {
                     $select = $('#name-type-id');
                     $select.find('option').remove();
-                    $.each(TypeNameMe, function (key, value)
+                    $.each(TypeName, function (key, value)
                     {
-                        alert("SEX");
+                        
                         $.each(value, function (childKey, childValue) {
                             $select.append('<option value=' + childValue.id + '>' + childValue.name_meal + '</option>');
                         });

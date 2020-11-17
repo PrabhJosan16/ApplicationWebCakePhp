@@ -26,12 +26,12 @@ class MealNameController extends AppController
             $this->autoRender = false;
             $name = $this->request->query['term'];
             $results = $this->MealName->find('all', array(
-                'conditions' => array('MealName.meal_name LIKE ' => '%' . $name . '%')
+                'conditions' => array('MealName.name LIKE ' => '%' . $name . '%')
             ));
 
             $resultArr = array();
             foreach ($results as $result) {
-                $resultArr[] = array('label' => $result['meal_name'], 'value' => $result['id']);
+                $resultArr[] = array('label' => $result['name'], 'value' => $result['id']);
             }
             echo json_encode($resultArr);
         }
