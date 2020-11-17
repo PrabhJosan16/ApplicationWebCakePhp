@@ -16,11 +16,11 @@ class NameTypeController extends AppController
     
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['getByNameType', 'add', 'edit', 'delete']);
+        $this->Auth->allow(['getByTypeMeal', 'add', 'edit', 'delete']);
     }
     
     
-     public function getByNameType() {
+     public function getByTypeMeal() {
         $type_meal_id = $this->request->query('type_meal_id');
 
         $nameType = $this->NameType->find('all', [
@@ -29,6 +29,7 @@ class NameTypeController extends AppController
         $this->set('nameType', $nameType);
         $this->set('_serialize', ['nameType']);
     }
+
     /**
      * Index method
      *

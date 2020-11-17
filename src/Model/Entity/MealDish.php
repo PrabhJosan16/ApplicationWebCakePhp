@@ -24,8 +24,8 @@ class MealDish extends Entity
      * @var array
      */
     protected $_accessible = [
-        'Meal_ID' => true,
-        'Menu_item_ID' => true,
+        'Meal_id' => true,
+        'Menu_item_id' => true,
         'Quantity' => true,
         'created' => true,
         'modified' => true,

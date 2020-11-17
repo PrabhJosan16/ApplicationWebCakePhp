@@ -46,14 +46,14 @@ class MealDishesTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('Meal_ID')
-            ->requirePresence('Meal_ID', 'create')
-            ->notEmptyString('Meal_ID');
+            ->integer('Meal_id')
+            ->requirePresence('Meal_id', 'create')
+            ->notEmptyString('Meal_id');
 
         $validator
-            ->integer('Menu_item_ID')
-            ->requirePresence('Menu_item_ID', 'create')
-            ->notEmptyString('Menu_item_ID');
+            ->integer('Menu_item_id')
+            ->requirePresence('Menu_item_id', 'create')
+            ->notEmptyString('Menu_item_id');
 
         $validator
             ->integer('Quantity')

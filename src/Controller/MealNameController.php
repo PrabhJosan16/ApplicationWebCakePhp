@@ -18,7 +18,7 @@ class MealNameController extends AppController
         $this->Auth->allow(['findMealName', 'add', 'edit', 'delete']);
     }
 
-    
+    //4.1
      public function findMealName() {
 
         if ($this->request->is('ajax')) {
@@ -36,6 +36,18 @@ class MealNameController extends AppController
             echo json_encode($resultArr);
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * Index method
      *

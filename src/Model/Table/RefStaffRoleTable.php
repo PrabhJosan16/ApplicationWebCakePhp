@@ -33,8 +33,8 @@ class RefStaffRoleTable extends Table
         parent::initialize($config);
 
         $this->setTable('ref_staff_role');
-        $this->setDisplayField('ID');
-        $this->setPrimaryKey('ID');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
     }

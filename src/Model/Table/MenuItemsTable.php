@@ -33,8 +33,8 @@ class MenuItemsTable extends Table
         parent::initialize($config);
 
         $this->setTable('menu_items');
-        $this->setDisplayField('ID');
-        $this->setPrimaryKey('ID');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
     }

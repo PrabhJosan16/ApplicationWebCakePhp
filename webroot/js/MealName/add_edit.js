@@ -1,16 +1,22 @@
+/* global urlToLinkedListFilter */
+    // The path to action from CakePHP is in urlToLinkedListFilter
 $(document).ready(function () {
-    // The path to action from CakePHP is in urlToLinkedListFilter 
-    $('#type_meal_id').on('change', function () {
-        var typeMealId = $(this).val();
-        if (typeMealId) {
+    
+    $('#type-meal-id').on('change', function () {
+        
+        var TypeMealId = $(this).val();
+        if (TypeMealId) {
+        
             $.ajax({
                 url: urlToLinkedListFilter,
-                data: 'type_meal_id=' + typeMealId,
-                success: function (TypeName) {
+                data: 'type_meal_id=' + TypeMealId,
+
+                success: function (TypeNameMe) {
                     $select = $('#name-type-id');
                     $select.find('option').remove();
-                    $.each(TypeName, function (key, value)
+                    $.each(TypeNameMe, function (key, value)
                     {
+                        alert("SEX");
                         $.each(value, function (childKey, childValue) {
                             $select.append('<option value=' + childValue.id + '>' + childValue.name_meal + '</option>');
                         });
@@ -18,9 +24,7 @@ $(document).ready(function () {
                 }
             });
         } else {
-            $('#name-type-id').html('<option value="">Select Type meal first</option>');
+            $('#name-type-id').html('<option value="">Select KrajRegion first</option>');
         }
     });
 });
-
-

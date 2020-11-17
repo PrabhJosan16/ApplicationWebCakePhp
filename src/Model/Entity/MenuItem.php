@@ -25,7 +25,7 @@ class MenuItem extends Entity
      * @var array
      */
     protected $_accessible = [
-        'Menu_ID' => true,
+        'Menu_id' => true,
         'Menu_item_name' => true,
         'Other_details' => true,
         'created' => true,

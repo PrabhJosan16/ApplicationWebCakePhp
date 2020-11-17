@@ -33,8 +33,8 @@ class StaffTable extends Table {
         parent::initialize($config);
 
         $this->setTable('staff');
-        $this->setDisplayField('ID');
-        $this->setPrimaryKey('ID');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
 
