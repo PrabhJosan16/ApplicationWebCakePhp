@@ -22,7 +22,7 @@ $(document).ready(function () {
                 }
             });
         } else {
-            $('#name-type-id').html('<option value="">Select KrajRegion first</option>');
+            $('#name-type-id').html('<option value="">Select Meal type first</option>');
         }
     });
 });
