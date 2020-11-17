@@ -43,6 +43,9 @@ class MealNameController extends AppController
      */
     public function index()
     {
+         $this->paginate = [
+            'contain' => ['typeMeal', 'nameType'],
+        ];
         $mealName = $this->paginate($this->MealName);
 
         $this->set(compact('mealName'));
@@ -58,7 +61,7 @@ class MealNameController extends AppController
     public function view($id = null)
     {
         $mealName = $this->MealName->get($id, [
-            'contain' => ['Meals'],
+            'contain' => ['Meals', 'typeMeal', 'nameType'],
         ]);
 
         $this->set('mealName', $mealName);
@@ -81,7 +84,9 @@ class MealNameController extends AppController
             }
             $this->Flash->error(__('The meal name could not be saved. Please, try again.'));
         }
-        $this->set(compact('mealName'));
+        $typeMeal = $this->MealName->typeMeal->find('list', ['limit' => 200]);
+        $nameType = $this->MealName->nameType->find('list', ['limit' => 200]);
+        $this->set(compact('mealName', 'typeMeal', 'nameType'));
     }
 
     /**

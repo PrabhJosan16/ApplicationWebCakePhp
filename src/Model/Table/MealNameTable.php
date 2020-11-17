@@ -40,6 +40,15 @@ class MealNameTable extends Table
             'foreignKey' => 'meal_name_id',
         ]);
         
+          $this->belongsTo('typeMeal', [
+            'foreignKey' => 'type_meal_id',
+            'joinType' => 'INNER',
+        ]);
+        $this->belongsTo('nameType', [
+            'foreignKey' => 'name_type_id',
+            'joinType' => 'INNER',
+        ]);
+        
     }
 
     /**

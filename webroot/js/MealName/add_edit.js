@@ -1,24 +1,24 @@
 $(document).ready(function () {
     // The path to action from CakePHP is in urlToLinkedListFilter 
-    $('#kraj-region-id').on('change', function () {
-        var krajRegionId = $(this).val();
-        if (krajRegionId) {
+    $('#type_meal_id').on('change', function () {
+        var typeMealId = $(this).val();
+        if (typeMealId) {
             $.ajax({
                 url: urlToLinkedListFilter,
-                data: 'kraj_region_id=' + krajRegionId,
-                success: function (okresCounties) {
-                    $select = $('#okres-county-id');
+                data: 'type_meal_id=' + typeMealId,
+                success: function (TypeName) {
+                    $select = $('#name-type-id');
                     $select.find('option').remove();
-                    $.each(okresCounties, function (key, value)
+                    $.each(TypeName, function (key, value)
                     {
                         $.each(value, function (childKey, childValue) {
-                            $select.append('<option value=' + childValue.id + '>' + childValue.nazev + '</option>');
+                            $select.append('<option value=' + childValue.id + '>' + childValue.name_meal + '</option>');
                         });
                     });
                 }
             });
         } else {
-            $('#okres-county-id').html('<option value="">Select KrajRegion first</option>');
+            $('#name-type-id').html('<option value="">Select Type meal first</option>');
         }
     });
 });

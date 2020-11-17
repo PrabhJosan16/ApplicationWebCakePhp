@@ -1,4 +1,13 @@
 <?php
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "NameType",
+    "action" => "getByNameType",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('MealName/add_edit', ['block' => 'scriptBottom']);
+?>
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MealName $mealName
@@ -17,8 +26,13 @@
     <fieldset>
         <legend><?= __('Add Meal Name') ?></legend>
         <?php
-            echo $this->Form->control('meal_name');
+            
+            echo $this->Form->control('type_meal_id', ['options' => $typeMeal]);
+            echo $this->Form->control('name_type_id', ['options' => [__('Please select a type of meal first')]]);
+            echo $this->Form->control('no_type');
+            echo $this->Form->control('name_meal');
         ?>
+        
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>

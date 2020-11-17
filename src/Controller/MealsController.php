@@ -48,7 +48,7 @@ class MealsController extends AppController {
         $this->loadComponent('Paginator');
         $meals = $this->Paginator->paginate($this->Meals->find(
                         'all', [
-                    'contain' => ['Users', 'Tags', 'Files', 'MealName'],
+                    'contain' => ['Users', 'Tags', 'Files'],
         ]));
 
         $this->set(compact('meals'));
