@@ -94,12 +94,12 @@ CREATE TABLE `meal_name` (
   `id` int(11) NOT NULL,
   `type_meal_id` int(11) NOT NULL,
   `name_type_id` int(11) NOT NULL,
-  `meal_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `no_type` varchar(7) COLLATE utf8mb4_general_ci NOT NULL,
   `name_meal` varchar(80) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `meal_name` (`id`, `type_meal_id`, `name_type_id`, `meal_name`, `no_type`, `name_meal`) VALUES
+INSERT INTO `meal_name` (`id`, `type_meal_id`, `name_type_id`, `name`, `no_type`, `name_meal`) VALUES
 (1, 1, 1, 'Pizza veg', 'VG001', 'Pizza Veg'),
 (2, 2, 2, 'Steak', 'ME001', 'Steak');
 
@@ -228,7 +228,7 @@ ALTER TABLE `meals_tags`
   ADD KEY `tag_key` (`tag_id`);
 
 ALTER TABLE `meal_dishes`
-  ADD KEY `FK_MenuItem_id_MealDishes` (`Menu_item_id`),
+  ADD KEY `FK_MenuItemID_MealDishes` (`Menu_item_id`),
   ADD KEY `FK_Meals_MealDishes` (`Meal_id`);
 
 ALTER TABLE `meal_name`
@@ -319,7 +319,7 @@ ALTER TABLE `meals_tags`
 
 ALTER TABLE `meal_dishes`
   ADD CONSTRAINT `FK_Meals_MealDishes` FOREIGN KEY (`Meal_id`) REFERENCES `meals` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `FK_MenuItem_id_MealDishes` FOREIGN KEY (`Menu_item_id`) REFERENCES `menu_items` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `FK_MenuItemID_MealDishes` FOREIGN KEY (`Menu_item_id`) REFERENCES `menu_items` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `meal_name`
   ADD CONSTRAINT `name_type_fk` FOREIGN KEY (`name_type_id`) REFERENCES `name_type` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
