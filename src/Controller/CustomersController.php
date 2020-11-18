@@ -19,9 +19,14 @@ class CustomersController extends AppController
      */
     public function index()
     {
-        $customers = $this->paginate($this->Customers);
-
+       
+        
+        $this->viewBuilder()->setLayout('customersSpa');
+        $customers = $this->Customers->find('all');
+   
         $this->set(compact('customers'));
+          
+        
     }
 
     /**
