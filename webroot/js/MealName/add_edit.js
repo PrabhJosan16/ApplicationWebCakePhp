@@ -2,17 +2,17 @@ $(document).ready(function () {
     
     $('#type-meal-id').on('change', function () {
         
-        var TypeMealId = $(this).val();
-        if (TypeMealId) {
+        var typeMealId = $(this).val();
+        if (typeMealId) {
         
             $.ajax({
                 url: urlToLinkedListFilter,
-                data: 'type_meal_id=' + TypeMealId,
+                data: 'type_meal_id=' + typeMealId,
 
-                success: function (TypeName) {
+                success: function (typeName) {
                     $select = $('#name-type-id');
                     $select.find('option').remove();
-                    $.each(TypeName, function (key, value)
+                    $.each(typeName, function (key, value)
                     {
                         
                         $.each(value, function (childKey, childValue) {

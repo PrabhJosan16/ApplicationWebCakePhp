@@ -65,10 +65,10 @@ class NameTypeTable extends Table
             ->notEmptyString('no_type');
 
         $validator
-            ->scalar('nom_dish')
-            ->maxLength('nom_dish', 80)
-            ->requirePresence('nom_dish', 'create')
-            ->notEmptyString('nom_dish');
+            ->scalar('nom_meal')
+            ->maxLength('nom_meal', 80)
+            ->requirePresence('nom_meal', 'create')
+            ->notEmptyString('nom_meal');
 
         return $validator;
     }
@@ -82,7 +82,7 @@ class NameTypeTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['type_dish_id'], 'TypeMeal'));
+        $rules->add($rules->existsIn(['type_meal_id'], 'TypeMeal'));
 
         return $rules;
     }

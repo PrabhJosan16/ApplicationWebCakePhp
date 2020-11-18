@@ -23,7 +23,6 @@ class MealName extends Entity
      * @var array
      */
     protected $_accessible = [
-        'meal_name' => true,
         'meals' => true,
         'type_meal_id' => true,
         'name_type_id' => true,

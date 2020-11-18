@@ -60,15 +60,29 @@ class MealNameTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('ID')
-            ->allowEmptyString('ID', null, 'create');
+            ->integer('id')
+            ->allowEmptyString('id', null, 'create');
 
         $validator
             ->scalar('meal_name')
-            ->maxLength('meal_name', 255)
+            ->maxLength('meal_name', 80)
             ->requirePresence('meal_name', 'create')
             ->notEmptyString('meal_name');
+        
+          $validator
+            ->scalar('no_type')
+            ->maxLength('no_type', 7)
+            ->requirePresence('no_type', 'create')
+            ->notEmptyString('no_type');
 
         return $validator;
+    }
+    
+        public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['type_meal_id'], 'TypeMeal'));
+        $rules->add($rules->existsIn(['name_type_id'], 'NameType'));
+
+        return $rules;
     }
 }

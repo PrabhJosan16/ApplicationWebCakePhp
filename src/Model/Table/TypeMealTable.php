@@ -63,10 +63,10 @@ class TypeMealTable extends Table
             ->notEmptyString('no_type');
 
         $validator
-            ->scalar('name_dish')
-            ->maxLength('name_dish', 80)
-            ->requirePresence('name_dish', 'create')
-            ->notEmptyString('name_dish');
+            ->scalar('name_meal')
+            ->maxLength('name_meal', 80)
+            ->requirePresence('name_meal', 'create')
+            ->notEmptyString('name_meal');
 
         return $validator;
     }

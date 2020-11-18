@@ -1,4 +1,9 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 
 CREATE TABLE `customers` (
@@ -9,8 +14,6 @@ CREATE TABLE `customers` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
-
 CREATE TABLE `files` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -20,7 +23,10 @@ CREATE TABLE `files` (
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 = Active, 0 = Inactive'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-
+INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
+(11, 'pizza.jpeg', 'files/add/', '2020-11-18 14:18:06', '2020-11-18 14:18:06', 1),
+(12, 'Frites.webp', 'files/add/', '2020-11-18 14:18:13', '2020-11-18 14:18:13', 1),
+(13, 'steak.jpg', 'files/add/', '2020-11-18 14:18:20', '2020-11-18 14:18:20', 1);
 
 CREATE TABLE `i18n` (
   `id` int(11) NOT NULL,
@@ -31,6 +37,8 @@ CREATE TABLE `i18n` (
   `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
+(23, 'en_CA', 'Meals', 26, 'Other_details', 'Steak A5 wagu');
 
 CREATE TABLE `meals` (
   `id` int(100) NOT NULL,
@@ -46,7 +54,8 @@ CREATE TABLE `meals` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
+INSERT INTO `meals` (`id`, `user_id`, `meal_name_id`, `Customer_id`, `Staff_id`, `slug`, `Date_of_meal`, `Cost_of_meal`, `Other_details`, `created`, `modified`) VALUES
+(26, 3, 2, NULL, NULL, 'Steak-A5-wagu', '2020-11-18 14:19:30', 15, NULL, '2020-11-18 14:19:30', '2020-11-18 14:19:30');
 
 CREATE TABLE `meals_files` (
   `id` int(11) NOT NULL,
@@ -54,14 +63,16 @@ CREATE TABLE `meals_files` (
   `file_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
+INSERT INTO `meals_files` (`id`, `meal_id`, `file_id`) VALUES
+(17, 26, 13);
 
 CREATE TABLE `meals_tags` (
   `meal_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
+INSERT INTO `meals_tags` (`meal_id`, `tag_id`) VALUES
+(26, 3);
 
 CREATE TABLE `meal_dishes` (
   `Meal_id` int(100) NOT NULL,
@@ -76,11 +87,13 @@ CREATE TABLE `meal_name` (
   `type_meal_id` int(11) NOT NULL,
   `name_type_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `no_type` varchar(7) COLLATE utf8mb4_general_ci NOT NULL,
-  `name_meal` varchar(80) COLLATE utf8mb4_general_ci NOT NULL
+  `no_type` varchar(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name_meal` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
+INSERT INTO `meal_name` (`id`, `type_meal_id`, `name_type_id`, `name`, `no_type`, `name_meal`) VALUES
+(1, 1, 1, 'Salad', 'VG001', 'Vegetarian'),
+(2, 2, 2, 'Steak', 'ME001', 'Meat');
 
 CREATE TABLE `menu` (
   `id` int(100) NOT NULL,
@@ -108,7 +121,9 @@ CREATE TABLE `name_type` (
   `name_meal` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
+INSERT INTO `name_type` (`id`, `type_meal_id`, `no_type`, `name_meal`) VALUES
+(1, 1, 'VG001', 'Salade'),
+(2, 2, 'ME001', 'Steak');
 
 CREATE TABLE `ref_staff_role` (
   `id` int(100) NOT NULL,
@@ -116,8 +131,6 @@ CREATE TABLE `ref_staff_role` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-
 
 CREATE TABLE `staff` (
   `id` int(100) NOT NULL,
@@ -129,8 +142,6 @@ CREATE TABLE `staff` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
-
 CREATE TABLE `tags` (
   `id` int(11) NOT NULL,
   `title` varchar(191) DEFAULT NULL,
@@ -138,7 +149,9 @@ CREATE TABLE `tags` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
+INSERT INTO `tags` (`id`, `title`, `created`, `modified`) VALUES
+(3, 'Meat', '2020-11-18 14:18:54', '2020-11-18 14:18:54'),
+(4, 'Vegetarian', '2020-11-18 14:19:04', '2020-11-18 14:19:04');
 
 CREATE TABLE `type_meal` (
   `id` int(11) NOT NULL,
@@ -146,7 +159,9 @@ CREATE TABLE `type_meal` (
   `name_meal` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
+INSERT INTO `type_meal` (`id`, `no_type`, `name_meal`) VALUES
+(1, 'VG001', 'Vegetarian'),
+(2, 'MG001', 'Meat');
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
@@ -233,16 +248,16 @@ ALTER TABLE `customers`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 ALTER TABLE `i18n`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 ALTER TABLE `meals`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 ALTER TABLE `meals_files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 ALTER TABLE `meal_name`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
@@ -263,7 +278,7 @@ ALTER TABLE `staff`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 ALTER TABLE `tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 ALTER TABLE `type_meal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
@@ -298,3 +313,7 @@ ALTER TABLE `name_type`
 
 ALTER TABLE `staff`
   ADD CONSTRAINT `FK_StaffRole_Satff` FOREIGN KEY (`Staff_role_code`) REFERENCES `ref_staff_role` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

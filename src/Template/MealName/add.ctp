@@ -1,7 +1,6 @@
-
 <?php
 $urlToLinkedListFilter = $this->Url->build([
-    "controller" => "nameType",
+    "controller" => "NameType",
     "action" => "getByTypeMeal",
     "_ext" => "json"
         ]);
@@ -29,12 +28,7 @@ echo $this->Html->script('MealName/add_edit', ['block' => 'scriptBottom']);
         <?php
             
             echo $this->Form->control('type_meal_id', ['options' => $typeMeal]);
-            echo $this->Form->control('name_type_id', ['options' => [__('Please select a type of meal first')]]);
-            
-            
-            
-            
-            
+            echo $this->Form->control('name_type_id', ['options' => [__('Please select a type of meal first')]]); 
             echo $this->Form->control('no_type');
             echo $this->Form->control('name_meal');
         ?>
