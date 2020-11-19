@@ -27,7 +27,14 @@ Router::prefix('api', function ($routes) {
     $routes->resources('Customers');
 });
 
+Router::prefix('admin', function (RouteBuilder $routes) {
+
+    $routes->fallbacks(DashedRoute::class);
+});
+
 Router::extensions(['json', 'xml']);
+
+
 /*
  * The default class to use for all routes
  *

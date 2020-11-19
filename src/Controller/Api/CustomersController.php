@@ -1,6 +1,4 @@
 <?php
-namespace App\Controller;
-
 
 namespace App\Controller\Api;
 
@@ -13,9 +11,9 @@ use App\Controller\Api\AppController;
  *
  * @method \App\Model\Entity\Customer[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class CustomersController extends AppController
-{
-      public function initialize()
+class CustomersController extends AppController {
+
+    public function initialize()
     {
         parent::initialize();
         $this->loadComponent('RequestHandler');
@@ -23,10 +21,10 @@ class CustomersController extends AppController
 
     public function index()
     {
-        $Customers = $this->Customers->find('all');
+        $customers = $this->Customers->find('all');
         $this->set([
-            'Customers' => $Customers,
-            '_serialize' => ['Customers']
+            'customers' => $customers,
+            '_serialize' => ['customers']
         ]);
     }
 
@@ -34,8 +32,8 @@ class CustomersController extends AppController
     {
         $customer = $this->Customers->get($id);
         $this->set([
-            '$customer' => $customer,
-            '_serialize' => ['$customer']
+            'customer' => $customer,
+            '_serialize' => ['customer']
         ]);
     }
 
@@ -50,8 +48,8 @@ class CustomersController extends AppController
         }
         $this->set([
             'message' => $message,
-            '$customer' => $customer,
-            '_serialize' => ['message', '$customer']
+            'customer' => $customer,
+            '_serialize' => ['message', 'customer']
         ]);
     }
 
@@ -84,4 +82,6 @@ class CustomersController extends AppController
             '_serialize' => ['message']
         ]);
     }
+
+
 }

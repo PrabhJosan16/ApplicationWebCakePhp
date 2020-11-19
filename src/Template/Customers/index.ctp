@@ -3,13 +3,13 @@ $urlToRestApi = $this->Url->build('/api/customers', true);
 echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
 echo $this->Html->script('Customers/index', ['block' => 'scriptBottom']);
 ?>
-<div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12 head">
-                    <h5>Customers)</h5>
+                    <h5>Customers</h5>
                     <!-- Add link -->
                     <div class="float-right">
-                        <a href="javascript:void(0);" class="btn btn-success" data-type="add" data-toggle="modal" data-target="#modalCustomerAddEdit"><i class="plus"></i> New  Customer</a>
+                        <a href="javascript:void(0);" class="btn btn-success" data-type="add" data-toggle="modal" data-target="#modalCustomerAddEdit"><i class="plus"></i> New customer</a>
                     </div>
                 </div>
                 <div class="statusMsg"></div>
@@ -18,8 +18,8 @@ echo $this->Html->script('Customers/index', ['block' => 'scriptBottom']);
                     <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
-                            <th>Customer Details</th>
-                            <th>contact</th>
+                            <th>Details/Nom</th>
+                            <th>Contact</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -45,7 +45,7 @@ echo $this->Html->script('Customers/index', ['block' => 'scriptBottom']);
                                 </tr>
                             <?php }
                         } else { ?>
-                            <tr><td colspan="5">No customer found...</td></tr>
+                            <tr><td colspan="5">No customers found...</td></tr>
 <?php } ?>
                     </tbody>
                 </table>
@@ -69,12 +69,12 @@ echo $this->Html->script('Customers/index', ['block' => 'scriptBottom']);
                         <div class="statusMsg"></div>
                         <form role="form">
                             <div class="form-group">
-                                 <label for="Customer_Details">Customer Details</label>
-                                <input type="text" class="form-control" name="Customer_Details" id="Customer_Details" placeholder="Enter the detail">
+                                <label for="Customer_Details">Name</label>
+                                <input type="text" class="form-control" name="Customer_Details" id="Customer_Details" placeholder="Enter the name">
                             </div>
                             <div class="form-group">
-                               <label for="contact">Contact</label>
-                                <input type="text" class="form-control" name="contact" id="contact" placeholder="Enter the contact information">
+                                <label for="contact">Contact</label>
+                                <input type="text" class="form-control" name="contact" id="contact" placeholder="Enter contact information">
                             </div>
                             <input type="hidden" class="form-control" name="id" id="id"/>
                         </form>

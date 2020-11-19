@@ -111,7 +111,7 @@ class MealNameController extends AppController
     public function edit($id = null)
     {
         $mealName = $this->MealName->get($id, [
-            'contain' => [],
+            'contain' => ['TypeMeal', 'NameType'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $mealName = $this->MealName->patchEntity($mealName, $this->request->getData());
@@ -122,7 +122,9 @@ class MealNameController extends AppController
             }
             $this->Flash->error(__('The meal name could not be saved. Please, try again.'));
         }
-        $this->set(compact('mealName'));
+         $typeMeal = $this->MealName->typeMeal->find('list', ['limit' => 200]);
+        $nameType = $this->MealName->nameType->find('list', ['limit' => 200]);
+        $this->set(compact('mealName', 'typeMeal', 'nameType'));
     }
 
     /**

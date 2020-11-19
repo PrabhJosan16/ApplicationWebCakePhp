@@ -62,7 +62,7 @@ class MealsController extends AppController {
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null) {
-        $meal = $this->Meals->findById($id)->firstOrFail();
+        $meal = $this->Meals->findById($id)->contain(['Users', 'Tags', 'Files', 'NameMeal'])->firstOrFail();
         // debug($meal);
         // die();
         $this->set(compact('meal'));
@@ -109,7 +109,7 @@ class MealsController extends AppController {
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function edit($id) {
-        $meal = $this->Meals->findById($id)->contain('Tags', 'Files')->firstOrFail();
+        $meal = $this->Meals->findById($id)->contain('Tags', 'Files', 'NameMeal')->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
             $this->Meals->patchEntity($meal, $this->request->getData(), [
                 // Added: Disable modification of user_id.
@@ -122,10 +122,13 @@ class MealsController extends AppController {
             $this->Flash->error(__('Unable to update your meal.'));
         }
         // Get a list of tags.
+        //$mealsName = $this->Articles->MealsName->find('list', ['limit' => 200]);
         $tags = $this->Meals->Tags->find('list');
         $files = $this->Meals->Files->find('list');
+        
 
         // Set tags to the view context
+       // $this->set('NameMeal', $mealsName);
         $this->set('tags', $tags);
         $this->set('files', $files);
         $this->set('meal', $meal);

@@ -7,8 +7,8 @@ function getCustomers() {
         dataType: "json",
         success:
                 function (data) {
-                    var CustomerTable = $('#CustomerData');
-                    CustomerTable.empty();
+                    var customerTable = $('#customerData');
+                    customerTable.empty();
                     $.each(data.customers, function (key, value)
                     {
                         var editDeleteButtons = '</td><td>' +
@@ -22,7 +22,7 @@ function getCustomers() {
                                     value.id + 
                                     '\') : false;">delete</a>' +
                                 '</td></tr>';
-                        CustomerTable.append('<tr><td>' + value.id + '</td><td>' + value.Customer_Details + '</td><td>' + value.contact + editDeleteButtons);
+                        customerTable.append('<tr><td>' + value.id + '</td><td>' + value.Customer_Details + '</td><td>' + value.contact + editDeleteButtons);
  
                     });
 
@@ -45,7 +45,7 @@ function convertFormToJSON(form) {
 }
 
 
-function CustomerAction(type, id) {
+function customerAction(type, id) {
     id = (typeof id == "undefined") ? '' : id;
     var statusArr = {add: "added", edit: "updated", delete: "deleted"};
     var requestType = '';
@@ -57,6 +57,7 @@ function CustomerAction(type, id) {
         customerData = convertFormToJSON(frmElement.find('form'));
     } else if (type == 'edit') {
         requestType = 'PUT';
+        ajaxUrl = ajaxUrl + "/" + id;
         customerData = convertFormToJSON(frmElement.find('form'));
     } else {
         requestType = 'DELETE';
@@ -71,7 +72,7 @@ function CustomerAction(type, id) {
         data: JSON.stringify(customerData),
         success: function (msg) {
             if (msg) {
-                frmElement.find('.statusMsg').html('<p class="alert alert-success">Çustomer data has been ' + statusArr[type] + ' successfully.</p>');
+                frmElement.find('.statusMsg').html('<p class="alert alert-success">Customer data has been ' + statusArr[type] + ' successfully.</p>');
                 getCustomers();
                 if (type == 'add') {
                     frmElement.find('form')[0].reset();
@@ -86,13 +87,14 @@ function CustomerAction(type, id) {
 // Fill the customer's data in the edit form
 function editCustomer(id) {
     $.ajax({
-        type: 'POST',
-        url: 'customerAction.php',
+        type: 'GET',
+        url: urlToRestApi + "/" + id,
         dataType: 'JSON',
-        data: 'action_type=data&id=' + id,
+  //      data: 'action_type=data&id=' + id,
         success: function (data) {
-            $('#id').val(data.id);
-            $('#Customer_Details').val(data.Customer_Details);
+            $('#id').val(data.customer.id);
+            $('#Customer_Details').val(data.customer.Customer_Details);
+            $('#contact').val(data.customer.contact);
         }
     });
 }
@@ -104,9 +106,9 @@ $(function () {
         var customerFunc = "customerAction('add');";
         $('.modal-title').html('Add new customer (customer)');
         if (type == 'edit') {
-            customerFunc = "customerAction('edit');";
-            $('.modal-title').html('Edit customer (customer)');
             var rowId = $(e.relatedTarget).attr('rowID');
+            customerFunc = "customerAction('edit')" + rowId + ");";
+            $('.modal-title').html('Edit customer (customer)');
             editCustomer(rowId);
         }
         $('#customerSubmit').attr("onclick", customerFunc);

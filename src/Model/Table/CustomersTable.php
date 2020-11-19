@@ -42,7 +42,7 @@ class CustomersTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Meals', [
-            'foreignKey' => 'Customer_ID'
+            'foreignKey' => 'Customer_id'
         ]);
     }
 
@@ -55,8 +55,8 @@ class CustomersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('ID')
-            ->allowEmptyString('ID', null, 'create');
+            ->integer('id')
+            ->allowEmptyString('id', null, 'create');
 
         $validator
             ->scalar('Customer_Details')
