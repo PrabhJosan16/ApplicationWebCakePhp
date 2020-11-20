@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('ID') ?></th>
-            <td><?= $this->Number->format($customer->ID) ?></td>
+            <td><?= $this->Number->format($customer->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
