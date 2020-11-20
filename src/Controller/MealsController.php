@@ -18,6 +18,7 @@ class MealsController extends AppController {
     public function initialize() {
         parent::initialize();
         $this->Auth->allow(['tags']);
+        $this->viewBuilder()->setLayout('cakephp_default');
     }
 
     public function isAuthorized($user) {

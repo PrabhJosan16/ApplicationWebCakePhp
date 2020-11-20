@@ -1,22 +1,14 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Customer $customer
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $customer->ID],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $customer->ID)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Customers'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="customers form large-9 medium-8 columns content">
+<?php $this->extend('../../Layout/TwitterBootstrap/dashboard'); ?>
+
+<?php $this->start('tb_actions'); ?>
+<li><?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $customer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id), 'class' => 'nav-link']) ?></li>
+<li><?= $this->Html->link(__('List Customers'), ['action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li><?= $this->Html->link(__('List Meals'), ['controller' => 'Meals', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li><?= $this->Html->link(__('New Meal'), ['controller' => 'Meals', 'action' => 'add'], ['class' => 'nav-link']) ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', '<ul class="nav flex-column">' . $this->fetch('tb_actions') . '</ul>'); ?>
+
+<div class="customers form content">
     <?= $this->Form->create($customer) ?>
     <fieldset>
         <legend><?= __('Edit Customer') ?></legend>

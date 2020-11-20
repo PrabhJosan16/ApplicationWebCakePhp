@@ -1,16 +1,13 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Customer $customer
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Customers'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="customers form large-9 medium-8 columns content">
+<?php $this->extend('../../Layout/TwitterBootstrap/dashboard'); ?>
+
+<?php $this->start('tb_actions'); ?>
+<li><?= $this->Html->link(__('List Customers'), ['action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li><?= $this->Html->link(__('List Meals'), ['controller' => 'Meals', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li><?= $this->Html->link(__('New Meal'), ['controller' => 'Meals', 'action' => 'add'], ['class' => 'nav-link']) ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', '<ul class="nav flex-column">' . $this->fetch('tb_actions') . '</ul>'); ?>
+
+<div class="customers form content">
     <?= $this->Form->create($customer) ?>
     <fieldset>
         <legend><?= __('Add Customer') ?></legend>

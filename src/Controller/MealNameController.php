@@ -16,6 +16,7 @@ class MealNameController extends AppController
      public function initialize() {
         parent::initialize();
         $this->Auth->allow(['findMealName', 'add', 'edit', 'delete']);
+        $this->viewBuilder()->setLayout('cakephp_default');
     }
 
     //4.1

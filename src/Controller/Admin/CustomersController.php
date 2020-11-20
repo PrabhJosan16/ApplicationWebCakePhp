@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Controller\Admin\AppController;
+use App\Controller\AppController;
 
 /**
  * Customers Controller
@@ -12,12 +12,6 @@ use App\Controller\Admin\AppController;
  */
 class CustomersController extends AppController
 {
-    
-       public function initialize() {
-        parent::initialize();
-//        $this->viewBuilder()->setLayout('cakephp_default');
-    }
-
     /**
      * Index method
      *
@@ -26,6 +20,7 @@ class CustomersController extends AppController
     public function index()
     {
         $customers = $this->paginate($this->Customers);
+
         $this->set(compact('customers'));
     }
 
@@ -39,7 +34,7 @@ class CustomersController extends AppController
     public function view($id = null)
     {
         $customer = $this->Customers->get($id, [
-            'contain' => [],
+            'contain' => ['Meals'],
         ]);
 
         $this->set('customer', $customer);
