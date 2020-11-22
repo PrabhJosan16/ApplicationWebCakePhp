@@ -46,6 +46,7 @@
         </td>
         <td>
             <?= $this->Html->link('Edit', ['action' => 'edit', $meal->id]) ?>
+            <?= $this->Html->link('(pdf)', ['action' => 'view', $meal->id . '.pdf']) ?>
             <?= $this->Form->postLink(
                 'Delete',
                 ['action' => 'delete', $meal->id],

@@ -63,7 +63,7 @@ class MealsController extends AppController {
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null) {
-        $meal = $this->Meals->findById($id)->contain(['Users', 'Tags', 'Files', 'NameMeal'])->firstOrFail();
+        $meal = $this->Meals->findById($id)->contain(['Users', 'Tags', 'Files'])->firstOrFail();
         // debug($meal);
         // die();
         $this->set(compact('meal'));

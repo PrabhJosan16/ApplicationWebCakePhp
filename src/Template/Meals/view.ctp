@@ -4,7 +4,7 @@
 <p><?= h($meal->Cost_of_meal) ?></p>
 <p><?= h($meal->Date_of_meal) ?></p>
 <p><small>Created: <?= $meal->created->format(DATE_RFC850) ?></small></p>
-<p><?= $this->Html->link('Edit', ['action' => 'edit', $meal->ID]) ?></p>
+<p><?= $this->Html->link('Edit', ['action' => 'edit', $meal->id]) ?></p>
 
 <?php
     $this->request->session()->write('Meals.id', $meal->id);

@@ -49,16 +49,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <nav class="top-bar expanded" data-topbar role="navigation">
             <ul class="title-area large-3 medium-4 columns">
                 <li class="name">
-                    <h1><?= $this->Html->link(__('CakePHP CMS Tuto') . ' v0.7.1', '/'); ?><?php // echo " - " . $this->fetch('title');          ?></h1>
+                    <h1><?= $this->Html->link(__('Restauration') . '', '/'); ?><?php // echo " - " . $this->fetch('title');          ?></h1>
                 </li>
             </ul>
             <div class="top-bar-section">
 
                 <ul class="right">
-                    <li><?= $this->Html->link(__('Listes liées'), ['controller' => 'ObecCities', 'action' => 'add']) ?></li>
-                    <li><?= $this->Html->link(__('Autocomplétion'), ['controller' => 'Articles', 'action' => 'add']) ?></li>
-                    <li><?= $this->Html->link(__('Monopage'), ['controller' => 'KrajRegions', 'action' => 'index']) ?></li>
-                    <li><?= $this->Html->link(__('Routage Admin'), ['prefix' => 'admin', 'controller' => 'KrajRegions', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Listes liées'), ['controller' => 'MealName', 'action' => 'add']) ?></li>
+                    <li><?= $this->Html->link(__('Autocomplétion'), ['controller' => 'Meals', 'action' => 'add']) ?></li>
+                    <li><?= $this->Html->link(__('Monopage'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('Routage Admin'), ['prefix' => 'admin', 'controller' => 'Customers', 'action' => 'index']) ?></li>
                     <?php
                     $loguser = $this->request->getSession()->read('Auth.User');
                     if ($loguser) :
@@ -84,9 +84,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     $language = $this->request->getSession()->read('Config.language');
                     if ($language == 'en_US'):
                         ?>
-                        <li>
-                            <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]); ?>
-                        </li>
+                          <li>
+                        <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]); ?>
+                    </li>
+                    <li>
+                        <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]); ?>
+                    </li>
+                    <li>
+                        <?= $this->Html->link('Espanol', ['action' => 'changeLang', 'es_US'], ['escape' => false]); ?>
+                    </li>
+                    <li>
+                         <?= $this->Html->link('À Propos', ['controller' => 'Pages', 'action' => 'aPropos']); ?>
+                    </li>
                     <?php else : ?>
                         <li>
                             <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]); ?>
