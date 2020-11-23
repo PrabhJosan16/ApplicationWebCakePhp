@@ -14,6 +14,11 @@ CREATE TABLE `customers` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `customers` (`id`, `Customer_Details`, `contact`, `created`, `modified`) VALUES
+(1, 'Prabh', 'email', '2020-11-18 00:00:00', '2020-11-18 00:00:00'),
+(2, 'Alain', 'cellphone', '2020-11-18 00:00:00', '2020-11-18 00:00:00'),
+(7, 'Daniel', 'Fax', '2020-11-23 22:15:45', '2020-11-23 22:15:45');
+
 CREATE TABLE `files` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -38,7 +43,10 @@ CREATE TABLE `i18n` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
-(23, 'en_CA', 'Meals', 26, 'Other_details', 'Steak A5 wagu');
+(23, 'en_CA', 'Meals', 26, 'Other_details', 'Steak medium rare'),
+(26, 'en_CA', 'Meals', 29, 'Other_details', 'Salad cesear'),
+(27, 'fr_CA', 'Meals', 26, 'Other_details', 'un bon steak'),
+(28, 'fr_CA', 'Meals', 29, 'Other_details', 'un bon steak');
 
 CREATE TABLE `meals` (
   `id` int(100) NOT NULL,
@@ -55,7 +63,8 @@ CREATE TABLE `meals` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `meals` (`id`, `user_id`, `meal_name_id`, `Customer_id`, `Staff_id`, `slug`, `Date_of_meal`, `Cost_of_meal`, `Other_details`, `created`, `modified`) VALUES
-(26, 3, 2, NULL, NULL, 'Steak-A5-wagu', '2020-11-18 14:19:30', 15, NULL, '2020-11-18 14:19:30', '2020-11-18 14:19:30');
+(26, 3, 2, NULL, NULL, 'Steak-A5-wagu', '2020-11-18 14:19:30', 12, 'Steak', '2020-11-18 14:19:30', '2020-11-22 17:58:06'),
+(29, 3, 1, NULL, NULL, 'Salad-cesear', '2020-11-22 17:24:41', 6, 'Steak', '2020-11-22 17:24:41', '2020-11-22 17:58:38');
 
 CREATE TABLE `meals_files` (
   `id` int(11) NOT NULL,
@@ -64,7 +73,8 @@ CREATE TABLE `meals_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `meals_files` (`id`, `meal_id`, `file_id`) VALUES
-(17, 26, 13);
+(21, 26, 13),
+(26, 29, 13);
 
 CREATE TABLE `meals_tags` (
   `meal_id` int(11) NOT NULL,
@@ -72,7 +82,8 @@ CREATE TABLE `meals_tags` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `meals_tags` (`meal_id`, `tag_id`) VALUES
-(26, 3);
+(26, 3),
+(29, 4);
 
 CREATE TABLE `meal_dishes` (
   `Meal_id` int(100) NOT NULL,
@@ -174,7 +185,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `users` (`id`, `email`, `password`, `uuid`, `confirmed`, `created`, `modified`) VALUES
-(3, 'admin@admin.com', '$2y$10$guR1XZnYUZp8QFWTtrgsVukC0/mpGrPP8d/rAoMZIk4e/2w458xl2', 'a6f2ca00-aafe-48aa-8ca4-03051da5f0ba', 0, '2020-10-02 19:46:41', '2020-10-19 18:17:12'),
+(3, 'admin@admin.com', '$2y$10$guR1XZnYUZp8QFWTtrgsVukC0/mpGrPP8d/rAoMZIk4e/2w458xl2', 'a6f2ca00-aafe-48aa-8ca4-03051da5f0ba', 1, '2020-10-02 19:46:41', '2020-11-22 17:58:56'),
 (5, 'cake@cms.com', '$2y$10$ywXZTBu2AoS9hp4ypXCubOsaovYQVx9eXBpqulyzR2xwjOE1XWUQi', 'd9c96552-3954-4735-8664-b85ec90fa4cc', 0, '2020-10-11 22:01:03', '2020-10-19 18:17:30'),
 (6, 'cake@cake.com', '$2y$10$v8Wm2qUjN/uDCQB.XgrGk.qVFSUkU3kTr1Injo.U4v1BwR175gPZe', 'b3d4b767-da23-4e4f-b327-2ca958a472c6', 0, '2020-10-14 21:01:06', '2020-10-19 18:17:32'),
 (12, 'prabhjosan16@gmail.com', '$2y$10$3rrzoNEUt.5Dfda0F6xpZeC1JyW1jtKprVKdiz5w15NwZiwu3qKye', 'ab80e36f-c293-4736-bb5f-9b1c4d5fceb0', 1, '2020-10-19 18:58:06', '2020-10-19 19:01:38');
@@ -245,19 +256,19 @@ ALTER TABLE `users`
 
 
 ALTER TABLE `customers`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 ALTER TABLE `files`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 ALTER TABLE `i18n`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 ALTER TABLE `meals`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 ALTER TABLE `meals_files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 ALTER TABLE `meal_name`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
