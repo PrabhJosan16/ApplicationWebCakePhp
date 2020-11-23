@@ -29,6 +29,18 @@
         </li>
 		<li>La page pour afficher un user offre la suppresion, la modification et affiche ce que le user a créer <br>
         </li>
+	<li>
+                La customers affiche les customers du restaurant en monopage et avec routage admin. <br>
+        </li>
+        <li>
+                Les listes liées sont des tables type_meal et name_type. <br>
+        </li>
+        <li>
+                L'autocomplétion fait parti de la table name_meal mais elle est liées à la tabel Meals. <br>
+        </li>
+        <li>
+                bootstrap de Twitter est utiliée pour la mise en page de admin/customers. <br>
+        </li>
     </ul>
  
     <ul>

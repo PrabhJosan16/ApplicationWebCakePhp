@@ -93,16 +93,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li>
                         <?= $this->Html->link('Espanol', ['action' => 'changeLang', 'es_US'], ['escape' => false]); ?>
                     </li>
-                    <li>
-                         <?= $this->Html->link('À Propos', ['controller' => 'Pages', 'action' => 'aPropos']); ?>
-                    </li>
+                  
                     <?php else : ?>
                         <li>
                             <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]); ?>
                         </li>
                     <?php endif; ?>
-                    <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
-                    <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+                          <li>
+                         <?= $this->Html->link('À Propos', ['controller' => 'Pages', 'action' => 'aPropos']); ?>
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
