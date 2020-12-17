@@ -29,6 +29,7 @@ class NameTypeController extends AppController
         $this->set('nameType', $nameType);
         $this->set('_serialize', ['nameType']);
     }
+    
 
     /**
      * Index method

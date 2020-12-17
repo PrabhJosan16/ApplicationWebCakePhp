@@ -15,7 +15,7 @@ class TypeMealController extends AppController
     
      public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['getByTypeMeal', 'add', 'edit', 'delete']);
+        $this->Auth->allow(['getByTypeMeal','getTypeMeal', 'add', 'edit', 'delete']);
     }
     /**
      * Index method
@@ -27,6 +27,15 @@ class TypeMealController extends AppController
         $typeMeal = $this->paginate($this->TypeMeal);
 
         $this->set(compact('typeMeal'));
+    }
+    
+     public function getTypeMeal() {
+        $typeMeal = $this->TypeMeal->find('all',
+                ['contain' => ['NameType']]);
+        $this->set([
+            'typeMeal' => $typeMeal,
+            '_serialize' => ['typeMeal']
+        ]);
     }
 
     /**

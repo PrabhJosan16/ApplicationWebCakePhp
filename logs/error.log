@@ -21552,3 +21552,1399 @@ Request URL: /pages/Contenu/images/data_model.gif
 Referer URL: http://localhost/restauration_cakecmstuto/pages/a-propos
 
 
+2020-12-17 17:27:13 Error: [PDOException] SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\MealsTable))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\MealsTable))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\MealsController.php(52): Cake\ORM\Table->find('all', Array)
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\MealsController->index()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MealsController))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(120): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#33 {main}
+Caused by: [PDOException] PDO::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\MealsTable))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\MealsTable))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\MealsController.php(52): Cake\ORM\Table->find('all', Array)
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\MealsController->index()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MealsController))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(120): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#33 {main}
+Request URL: /
+
+
+2020-12-17 17:27:23 Error: [PDOException] SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\MealsTable))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\MealsTable))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\MealsController.php(52): Cake\ORM\Table->find('all', Array)
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\MealsController->index()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MealsController))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(120): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#33 {main}
+Caused by: [PDOException] PDO::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\MealsTable))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\MealsTable))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\MealsController.php(52): Cake\ORM\Table->find('all', Array)
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\MealsController->index()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MealsController))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(120): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#33 {main}
+Request URL: /
+
+
+2020-12-17 17:27:33 Error: [PDOException] SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\MealsTable))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\MealsTable))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\MealsController.php(52): Cake\ORM\Table->find('all', Array)
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\MealsController->index()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MealsController))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(120): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#33 {main}
+Caused by: [PDOException] PDO::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\MealsTable))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\MealsTable))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\MealsController.php(52): Cake\ORM\Table->find('all', Array)
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\MealsController->index()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MealsController))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(120): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#33 {main}
+Request URL: /
+Referer URL: http://localhost/
+
+
+2020-12-17 21:49:31 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 42]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 42
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:49:58 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 42]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 42
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:50:17 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 42]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 42
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:51:01 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 46]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:55:35 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 46]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:56:39 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 46]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:57:38 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 46]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:57:43 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 46]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:57:46 Warning: Warning (2): Use of undefined constant nameMeal - assumed 'nameMeal' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp, line 46]
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\MealName\add.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 21:58:12 Error: [ParseError] syntax error, unexpected '<', expecting end of file (C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Template\MealName\add.ctp:34)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MealNameController))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /meal-name/add
+Referer URL: http://localhost/restauration_cakecmstuto/
+
+
+2020-12-17 22:05:55 Error: [Cake\View\Exception\MissingTemplateException] Template file "NameType\json\get_by_type_meal.ctp" is missing. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'NameType\\json\\get_by_type_meal.ctp',
+)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(105): Cake\View\View->_getViewFileName('NameType\\json\\g...')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\NameTypeController))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /name-type/get-by-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+
+
+2020-12-17 22:07:02 Error: [Cake\View\Exception\MissingTemplateException] Template file "NameType\json\get_by_type_meal.ctp" is missing. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'NameType\\json\\get_by_type_meal.ctp',
+)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(105): Cake\View\View->_getViewFileName('NameType\\json\\g...')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\NameTypeController))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /name-type/get-by-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+
+
+2020-12-17 22:07:42 Error: [Cake\View\Exception\MissingTemplateException] Template file "NameType\json\get_by_type_meal.ctp" is missing. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'NameType\\json\\get_by_type_meal.ctp',
+)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(105): Cake\View\View->_getViewFileName('NameType\\json\\g...')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\NameTypeController))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /name-type/get-by-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+
+
+2020-12-17 22:07:45 Error: [Cake\View\Exception\MissingTemplateException] Template file "NameType\json\get_by_type_meal.ctp" is missing. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'NameType\\json\\get_by_type_meal.ctp',
+)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(105): Cake\View\View->_getViewFileName('NameType\\json\\g...')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\NameTypeController))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /name-type/get-by-type-meal.json
+
+
+2020-12-17 22:29:58 Error: [Cake\Controller\Exception\MissingActionException] Action TypeMealController::getByTypeMeal() could not be found, or is not accessible. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php:596)
+Exception Attributes: array (
+  'controller' => 'TypeMealController',
+  'action' => 'getByTypeMeal',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /type-meal/get-by-type-meal.json
+
+
+2020-12-17 22:32:26 Error: [Cake\Controller\Exception\MissingActionException] Action TypeMealController::getByTypeMeal() could not be found, or is not accessible. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php:596)
+Exception Attributes: array (
+  'controller' => 'TypeMealController',
+  'action' => 'getByTypeMeal',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /type-meal/get-by-type-meal.json
+
+
+2020-12-17 22:32:35 Error: [InvalidArgumentException] The NameType association is not defined on TypeMeal. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php:1013)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(550): Cake\ORM\Table->getAssociation('NameType')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(376): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\TypeMealTable), 'NameType', Array, Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(506): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\TypeMealTable))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(477): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\TypeMealTable))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1185): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\TypeMealTable), true)
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1134): Cake\ORM\Query->_transformQuery()
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(137): Cake\ORM\Query->sql()
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(283): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(290): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(340): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1371): Cake\ORM\Query->all()
+#18 [internal function]: Cake\ORM\Query->jsonSerialize()
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(152): json_encode(Array, 655)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(98): Cake\View\JsonView->_serialize(Array)
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:32:49 Error: [InvalidArgumentException] The NameType association is not defined on TypeMeal. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php:1013)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(550): Cake\ORM\Table->getAssociation('NameType')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(376): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\TypeMealTable), 'NameType', Array, Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(506): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\TypeMealTable))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(477): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\TypeMealTable))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1185): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\TypeMealTable), true)
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1134): Cake\ORM\Query->_transformQuery()
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(137): Cake\ORM\Query->sql()
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(283): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(290): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(340): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1371): Cake\ORM\Query->all()
+#18 [internal function]: Cake\ORM\Query->jsonSerialize()
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(152): json_encode(Array, 655)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(98): Cake\View\JsonView->_serialize(Array)
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:32:51 Error: [InvalidArgumentException] The NameType association is not defined on TypeMeal. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php:1013)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(550): Cake\ORM\Table->getAssociation('NameType')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(376): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\TypeMealTable), 'NameType', Array, Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(506): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\TypeMealTable))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(477): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\TypeMealTable))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1185): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\TypeMealTable), true)
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1134): Cake\ORM\Query->_transformQuery()
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(137): Cake\ORM\Query->sql()
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(283): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(290): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(340): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1371): Cake\ORM\Query->all()
+#18 [internal function]: Cake\ORM\Query->jsonSerialize()
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(152): json_encode(Array, 655)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(98): Cake\View\JsonView->_serialize(Array)
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:33:08 Error: [InvalidArgumentException] The NameType association is not defined on TypeMeal. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php:1013)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(550): Cake\ORM\Table->getAssociation('NameType')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(376): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\TypeMealTable), 'NameType', Array, Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(506): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\TypeMealTable))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(477): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\TypeMealTable))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1185): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\TypeMealTable), true)
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1134): Cake\ORM\Query->_transformQuery()
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(137): Cake\ORM\Query->sql()
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(283): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(290): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(340): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1371): Cake\ORM\Query->all()
+#18 [internal function]: Cake\ORM\Query->jsonSerialize()
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(152): json_encode(Array, 655)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(98): Cake\View\JsonView->_serialize(Array)
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:34:49 Error: [InvalidArgumentException] The NameType association is not defined on TypeMeal. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php:1013)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(550): Cake\ORM\Table->getAssociation('NameType')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(376): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\TypeMealTable), 'NameType', Array, Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(506): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\TypeMealTable))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(477): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\TypeMealTable))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1185): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\TypeMealTable), true)
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1134): Cake\ORM\Query->_transformQuery()
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(137): Cake\ORM\Query->sql()
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(283): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(290): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(340): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1371): Cake\ORM\Query->all()
+#18 [internal function]: Cake\ORM\Query->jsonSerialize()
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(152): json_encode(Array, 655)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(98): Cake\View\JsonView->_serialize(Array)
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /type-meal/get-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+
+
+2020-12-17 22:34:53 Error: [InvalidArgumentException] The NameType association is not defined on TypeMeal. (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php:1013)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(550): Cake\ORM\Table->getAssociation('NameType')
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(376): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\TypeMealTable), 'NameType', Array, Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(506): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\TypeMealTable))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(477): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\TypeMealTable))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1185): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\TypeMealTable), true)
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1134): Cake\ORM\Query->_transformQuery()
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(137): Cake\ORM\Query->sql()
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(283): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(290): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(340): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1155): Cake\Database\Query->execute()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(310): Cake\ORM\Query->_execute()
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1099): Cake\ORM\Query->_all()
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(1371): Cake\ORM\Query->all()
+#18 [internal function]: Cake\ORM\Query->jsonSerialize()
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(152): json_encode(Array, 655)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\SerializedView.php(98): Cake\View\JsonView->_serialize(Array)
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\View\JsonView.php(106): Cake\View\SerializedView->render(NULL, NULL)
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\JsonView->render(NULL, NULL)
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#40 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#41 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#42 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:37:16 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'restauration.name_types' doesn't exist (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:132)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'name_types', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('name_types', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('name_types')
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(520): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(475): Cake\ORM\Query->_addAssociationsToTypeMap(Object(App\Model\Table\TypeMealTable), Object(Cake\Database\TypeMap), Array)
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(836): Cake\ORM\Query->contain(Array)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(2554): Cake\ORM\Query->applyOptions(Array)
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1371): Cake\ORM\Table->callFinder('all', Object(Cake\ORM\Query), Array)
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\TypeMealController.php(34): Cake\ORM\Table->find('all', Array)
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\TypeMealController->getTypeMeal()
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#30 {main}
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'restauration.name_types' doesn't exist (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'name_types', Array, Object(Cake\Database\Schema\TableSchema))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('name_types', Array)
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('name_types')
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(520): Cake\ORM\Table->getPrimaryKey()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(475): Cake\ORM\Query->_addAssociationsToTypeMap(Object(App\Model\Table\TypeMealTable), Object(Cake\Database\TypeMap), Array)
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(836): Cake\ORM\Query->contain(Array)
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(2554): Cake\ORM\Query->applyOptions(Array)
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1371): Cake\ORM\Table->callFinder('all', Object(Cake\ORM\Query), Array)
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\TypeMealController.php(34): Cake\ORM\Table->find('all', Array)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\TypeMealController->getTypeMeal()
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#40 {main}
+Request URL: /type-meal/get-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+
+
+2020-12-17 22:37:19 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'restauration.name_types' doesn't exist (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:132)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'name_types', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('name_types', Array)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('name_types')
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(520): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(475): Cake\ORM\Query->_addAssociationsToTypeMap(Object(App\Model\Table\TypeMealTable), Object(Cake\Database\TypeMap), Array)
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(836): Cake\ORM\Query->contain(Array)
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(2554): Cake\ORM\Query->applyOptions(Array)
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1371): Cake\ORM\Table->callFinder('all', Object(Cake\ORM\Query), Array)
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\TypeMealController.php(34): Cake\ORM\Table->find('all', Array)
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\TypeMealController->getTypeMeal()
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#30 {main}
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'restauration.name_types' doesn't exist (C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'name_types', Array, Object(Cake\Database\Schema\TableSchema))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('name_types', Array)
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('name_types')
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(520): Cake\ORM\Table->getPrimaryKey()
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(475): Cake\ORM\Query->_addAssociationsToTypeMap(Object(App\Model\Table\TypeMealTable), Object(Cake\Database\TypeMap), Array)
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Query.php(836): Cake\ORM\Query->contain(Array)
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(2554): Cake\ORM\Query->applyOptions(Array)
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\ORM\Table.php(1371): Cake\ORM\Table->callFinder('all', Object(Cake\ORM\Query), Array)
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\TypeMealController.php(34): Cake\ORM\Table->find('all', Array)
+#20 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\TypeMealController->getTypeMeal()
+#21 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#22 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#23 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#31 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#33 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#35 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#37 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#39 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#40 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:52:01 Error: [Error] Call to a member function find() on bool (C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\TypeMealController.php:34)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\TypeMealController->getTypeMeal()
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:52:01 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php line=855 in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 53]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 53
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 154]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 154
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 59
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:09 Error: [Error] Call to a member function find() on bool (C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\TypeMealController.php:34)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\TypeMealController->getTypeMeal()
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /type-meal/get-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+
+
+2020-12-17 22:52:09 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php line=855 in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 53]
+Request URL: /type-meal/get-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 53
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 154]
+Request URL: /type-meal/get-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 154
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 59
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /type-meal/get-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:09 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /type-meal/get-type-meal.json
+Referer URL: http://localhost/restauration_cakecmstuto/meal-name/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:11 Error: [Error] Call to a member function find() on bool (C:\Program Files\Ampps\www\restauration_cakecmstuto\src\Controller\TypeMealController.php:34)
+#0 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\TypeMealController->getTypeMeal()
+#1 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\TypeMealController))
+#3 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\restauration_cakecmstuto\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /type-meal/get-type-meal.json
+
+
+2020-12-17 22:52:11 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php line=855 in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 53]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 53
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 154]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 154
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 59
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-12-17 22:52:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Error\Debugger.php:855) in [C:\Program Files\Ampps\www\restauration_cakecmstuto\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 183]
+Request URL: /type-meal/get-type-meal.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 183
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 60
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
+[main] - ROOT\webroot\index.php, line 40
+
+
+

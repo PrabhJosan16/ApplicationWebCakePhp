@@ -39,7 +39,7 @@ class TypeMealTable extends Table
         $this->hasMany('MealName', [
             'foreignKey' => 'type_meal_id',
         ]);
-        $this->hasMany('NameTypes', [
+        $this->hasMany('NameType', [
             'foreignKey' => 'type_meal_id',
         ]);
     }

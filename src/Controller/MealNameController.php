@@ -39,16 +39,6 @@ class MealNameController extends AppController
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
      * Index method
      *
