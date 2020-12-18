@@ -1,125 +1,132 @@
+var app = angular.module('app', []);
 
-// Update the customers data list
-function getCustomers() {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi,
-        dataType: "json",
-        success:
-                function (data) {
-                    var customerTable = $('#customerData');
-                    customerTable.empty();
-                    $.each(data.customers, function (key, value)
-                    {
-                        var editDeleteButtons = '</td><td>' +
-                                '<a href="javascript:void(0);" class="btn btn-warning" rowID="' +
-                                    value.id + 
-                                    '" data-type="edit" data-toggle="modal" data-target="#modalCustomerAddEdit">' + 
-                                    'edit</a>' +
-                                '<a href="javascript:void(0);" class="btn btn-danger"' +
-                                    'onclick="return confirm(\'Are you sure to delete data?\') ?' + 
-                                    'customerAction(\'delete\', \'' + 
-                                    value.id + 
-                                    '\') : false;">delete</a>' +
-                                '</td></tr>';
-                        customerTable.append('<tr><td>' + value.id + '</td><td>' + value.Customer_Details + '</td><td>' + value.contact + editDeleteButtons);
- 
-                    });
+app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($scope, CustomerCRUDService) {
 
-                }
+        $scope.updateCustomer = function () {
+            CustomerCRUDService.updateCustomer($scope.customer.id, $scope.customer.Customer_Details, $scope.customer.contact)
+                    .then(function success(response) {
+                        $scope.message = 'Customer data updated!';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error updating customer!';
+                                $scope.message = '';
+                            });
+        }
 
-    });
-}
+        $scope.getCustomer = function () {
+            var id = $scope.customer.id;
+            CustomerCRUDService.getCustomer($scope.customer.id)
+                    .then(function success(response) {
+                        $scope.customer = response.data.customer;
+                        $scope.customer.id = id;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                if (response.status === 404) {
+                                    $scope.errorMessage = 'Customer not found!';
+                                } else {
+                                    $scope.errorMessage = "Error getting customer!";
+                                }
+                            });
+        }
 
- /* Function takes a jquery form
- and converts it to a JSON dictionary */
-function convertFormToJSON(form) {
-    var array = $(form).serializeArray();
-    var json = {};
-
-    $.each(array, function () {
-        json[this.name] = this.value || '';
-    });
-
-    return json;
-}
-
-
-function customerAction(type, id) {
-    id = (typeof id == "undefined") ? '' : id;
-    var statusArr = {add: "added", edit: "updated", delete: "deleted"};
-    var requestType = '';
-    var customerData = '';
-    var ajaxUrl = urlToRestApi;
-    frmElement = $("#modalCustomerAddEdit");
-    if (type == 'add') {
-        requestType = 'POST';
-        customerData = convertFormToJSON(frmElement.find('form'));
-    } else if (type == 'edit') {
-        requestType = 'PUT';
-        ajaxUrl = ajaxUrl + "/" + id;
-        customerData = convertFormToJSON(frmElement.find('form'));
-    } else {
-        requestType = 'DELETE';
-        ajaxUrl = ajaxUrl + "/" + id;
-    }
-    frmElement.find('.statusMsg').html('');
-    $.ajax({
-        type: requestType,
-        url: ajaxUrl,
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(customerData),
-        success: function (msg) {
-            if (msg) {
-                frmElement.find('.statusMsg').html('<p class="alert alert-success">Customer data has been ' + statusArr[type] + ' successfully.</p>');
-                getCustomers();
-                if (type == 'add') {
-                    frmElement.find('form')[0].reset();
-                }
+        $scope.addCustomer = function () {
+            if ($scope.customer != null && $scope.customer.Customer_Details) {
+                CustomerCRUDService.addCustomer($scope.customer.Customer_Details, $scope.customer.contact)
+                        .then(function success(response) {
+                            $scope.message = 'Customer added!';
+                            $scope.errorMessage = '';
+                        },
+                                function error(response) {
+                                    $scope.errorMessage = 'Error adding customer!';
+                                    $scope.message = '';
+                                });
             } else {
-                frmElement.find('.statusMsg').html('<p class="alert alert-danger">Some problem occurred, please try again.</p>');
+                $scope.errorMessage = 'Please enter a name!';
+                $scope.message = '';
             }
         }
-    });
-}
 
-// Fill the customer's data in the edit form
-function editCustomer(id) {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi + "/" + id,
-        dataType: 'JSON',
-  //      data: 'action_type=data&id=' + id,
-        success: function (data) {
-            $('#id').val(data.customer.id);
-            $('#Customer_Details').val(data.customer.Customer_Details);
-            $('#contact').val(data.customer.contact);
+        $scope.deleteCustomer = function () {
+            CustomerCRUDService.deleteCustomer($scope.customer.id)
+                    .then(function success(response) {
+                        $scope.message = 'Customer deleted!';
+                        $scope.customer = null;
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error deleting customer!';
+                                $scope.message = '';
+                            })
         }
-    });
-}
 
-// Actions on modal show and hidden events
-$(function () {
-    $('#modalCustomerAddEdit').on('show.bs.modal', function (e) {
-        var type = $(e.relatedTarget).attr('data-type');
-        var customerFunc = "customerAction('add');";
-        $('.modal-title').html('Add new customer (customer)');
-        if (type == 'edit') {
-            var rowId = $(e.relatedTarget).attr('rowID');
-            customerFunc = "customerAction('edit')" + rowId + ");";
-            $('.modal-title').html('Edit customer (customer)');
-            editCustomer(rowId);
+        $scope.getAllCustomers = function () {
+            CustomerCRUDService.getAllCustomers()
+                    .then(function success(response) {
+                        $scope.customers = response.data.customers;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                $scope.errorMessage = 'Error getting customers!';
+                            });
         }
-        $('#customerSubmit').attr("onclick", customerFunc);
-    });
 
-    $('#modalCustomerAddEdit').on('hidden.bs.modal', function () {
-        $('#customerSubmit').attr("onclick", "");
-        $(this).find('form')[0].reset();
-        $(this).find('.statusMsg').html('');
-    });
-});
+    }]);
 
+app.service('CustomerCRUDService', ['$http', function ($http) {
+
+        this.getCustomer = function getCustomer(customerId) {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi + '/' + customerId,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+        this.addCustomer = function addCustomer(Customer_Details, contact) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApi,
+                data: {Customer_Details: Customer_Details, contact: contact},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+        this.deleteCustomer = function deleteCustomer(id) {
+            return $http({
+                method: 'DELETE',
+                url: urlToRestApi + '/' + id,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.updateCustomer = function updateCustomer(id, Customer_Details, contact) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApi + '/' + id,
+                data: {Customer_Details: Customer_Details, contact: contact},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.getAllCustomers = function getAllCustomers() {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+    }]);
 
 
