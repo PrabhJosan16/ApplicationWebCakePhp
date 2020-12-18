@@ -32,6 +32,6 @@ var app = angular.module('linkedlists', []);
 app.controller('TypeMealController', function ($scope, $http) {
     // l'url vient de add.ctp
     $http.get(urlToLinkedListFilter).then(function (response) {
-        $scope.nameType = response.data.nameType;
+        $scope.typeMeals = response.data.typeMeals;
     });
 });

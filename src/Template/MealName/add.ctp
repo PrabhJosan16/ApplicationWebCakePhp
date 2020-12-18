@@ -37,7 +37,7 @@ echo $this->Html->script('MealName/add_edit', ['block' => 'scriptBottom']);
                 name="type_meal_id"
                 id="type-meal-id" 
                 ng-model="typeMeal" 
-                ng-options="typeMeal.name_meal for typeMeal in typeMeal track by typeMeal.id"
+                ng-options="typeMeal.name_meal for typeMeal in typeMeals track by typeMeal.id"
                 >
                 <option value=''>Select</option>
             </select>

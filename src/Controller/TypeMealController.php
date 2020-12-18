@@ -30,11 +30,11 @@ class TypeMealController extends AppController
     }
     
      public function getTypeMeal() {
-        $typeMeal = $this->TypeMeal->find('all',
+        $typeMeals = $this->TypeMeal->find('all',
                 ['contain' => ['NameType']]);
         $this->set([
-            'typeMeal' => $typeMeal,
-            '_serialize' => ['typeMeal']
+            'typeMeals' => $typeMeals,
+            '_serialize' => ['typeMeals']
         ]);
     }
 
