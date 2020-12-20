@@ -7,6 +7,7 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
                     .then(function success(response) {
                         $scope.message = 'Customer data updated!';
                         $scope.errorMessage = '';
+                        $scope.getAllCustomers();
                     },
                             function error(response) {
                                 $scope.errorMessage = 'Error updating customer!';
@@ -43,6 +44,7 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
                                 function error(response) {
                                     $scope.errorMessage = 'Error adding customer!';
                                     $scope.message = '';
+                                    $scope.getAllCustomers();
                                 });
             } else {
                 $scope.errorMessage = 'Please enter a name!';
@@ -56,6 +58,7 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
                         $scope.message = 'Customer deleted!';
                         $scope.customer = null;
                         $scope.errorMessage = '';
+                        $scope.getAllCustomers();
                     },
                             function error(response) {
                                 $scope.errorMessage = 'Error deleting customer!';
