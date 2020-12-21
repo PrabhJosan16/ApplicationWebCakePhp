@@ -1,9 +1,16 @@
-var app = angular.module('app', []);
+    var onloadCallback = function() {
+        widgetId1 = grecaptcha.render('example1', {
+            'sitekey' : '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+            'theme' : 'light'
+        });
+    };
 
-app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($scope, CustomerCRUDService) {
+var app = angular.module('app', []);
+var urlToRestApiUsers = urlToRestApi.substring(0, urlToRestApi.lastIndexOf('/') + 1) + 'users';
+app.controller('CustomerCrudJwtCtrl', ['$scope', 'CustomerCrudJwtService', function ($scope, CustomerCrudJwtService) {
 
         $scope.updateCustomer = function () {
-            CustomerCRUDService.updateCustomer($scope.customer.id, $scope.customer.Customer_Details, $scope.customer.contact)
+            CustomerCrudJwtService.updateCustomer($scope.customer.id, $scope.customer.Customer_Details, $scope.customer.contact)
                     .then(function success(response) {
                         $scope.message = 'Customer data updated!';
                         $scope.errorMessage = '';
@@ -17,7 +24,7 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
 
         $scope.getCustomer = function () {
             var id = $scope.customer.id;
-            CustomerCRUDService.getCustomer($scope.customer.id)
+            CustomerCrudJwtService.getCustomer($scope.customer.id)
                     .then(function success(response) {
                         $scope.customer = response.data.customer;
                         $scope.customer.id = id;
@@ -36,7 +43,7 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
 
         $scope.addCustomer = function () {
             if ($scope.customer != null && $scope.customer.Customer_Details) {
-                CustomerCRUDService.addCustomer($scope.customer.Customer_Details, $scope.customer.contact)
+                CustomerCrudJwtService.addCustomer($scope.customer.Customer_Details, $scope.customer.contact)
                         .then(function success(response) {
                             $scope.message = 'Customer added!';
                             $scope.errorMessage = '';
@@ -53,7 +60,7 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
         }
 
         $scope.deleteCustomer = function () {
-            CustomerCRUDService.deleteCustomer($scope.customer.id)
+            CustomerCrudJwtService.deleteCustomer($scope.customer.id)
                     .then(function success(response) {
                         $scope.message = 'Customer deleted!';
                         $scope.customer = null;
@@ -67,7 +74,7 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
         }
 
         $scope.getAllCustomers = function () {
-            CustomerCRUDService.getAllCustomers()
+            CustomerCrudJwtService.getAllCustomers()
                     .then(function success(response) {
                         $scope.customers = response.data.customers;
                         $scope.message = '';
@@ -79,16 +86,57 @@ app.controller('CustomerCRUDCtrl', ['$scope', 'CustomerCRUDService', function ($
                             });
         }
 
-    }]);
+        $scope.login = function () {   
+            if(grecaptcha.getResponse(widgetId1)==''){
+                $scope.captcha_status='Please verify captha.';
+                return;
+            }
+               if ($scope.user != null && $scope.user.username) {
+                   CustomerCrudJwtService.login($scope.user)
+                           .then(function success(response) {
+                               $scope.message = $scope.user.username + ' en session!';
+                               $scope.errorMessage = '';
+                               localStorage.setItem('token', response.data.data.token);
+                               localStorage.setItem('user_id', response.data.data.id);
+                           },
+                                   function error(response) {
+                                       $scope.errorMessage = 'Nom d\'utilisateur ou mot de passe invalide...';
+                                       $scope.message = '';
+                                   });
+               } else {
+                   $scope.errorMessage = 'Entrez un nom d\'utilisateur s.v.p.';
+                   $scope.message = '';
+               }
 
-app.service('CustomerCRUDService', ['$http', function ($http) {
+           }
+           $scope.logout = function () {
+               localStorage.setItem('token', "no token");
+               localStorage.setItem('user', "no user");
+               $scope.message = '';
+               $scope.errorMessage = 'Utilisateur déconnecté!';
+           }
+           $scope.changePassword = function () {
+               CustomerCrudJwtService.changePassword($scope.user.password)
+                       .then(function success(response) {
+                           $scope.message = 'Mot de passe mis à jour!';
+                           $scope.errorMessage = '';
+                       },
+                               function error(response) {
+                                   $scope.errorMessage = 'Mot de passe inchangé!';
+                                   $scope.message = '';
+                               });
+           }
+       }]);
+
+app.service('CustomerCrudJwtService', ['$http', function ($http) {
 
         this.getCustomer = function getCustomer(customerId) {
             return $http({
                 method: 'GET',
                 url: urlToRestApi + '/' + customerId,
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
             });
         }
 
@@ -98,7 +146,9 @@ app.service('CustomerCRUDService', ['$http', function ($http) {
                 url: urlToRestApi,
                 data: {Customer_Details: Customer_Details, contact: contact},
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }    
             });
         }
 
@@ -107,7 +157,9 @@ app.service('CustomerCRUDService', ['$http', function ($http) {
                 method: 'DELETE',
                 url: urlToRestApi + '/' + id,
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
             })
         }
 
@@ -117,7 +169,9 @@ app.service('CustomerCRUDService', ['$http', function ($http) {
                 url: urlToRestApi + '/' + id,
                 data: {Customer_Details: Customer_Details, contact: contact},
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
             })
         }
 
@@ -130,6 +184,27 @@ app.service('CustomerCRUDService', ['$http', function ($http) {
             });
         }
 
+        this.login = function login(user) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApiUsers + '/token',
+                data: {username: user.username, password: user.password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'}
+            });
+        }
+        this.changePassword = function changePassword(password) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApiUsers + '/' + localStorage.getItem("user_id"),
+                data: {password: password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
+            })
+        }
     }]);
+
 
 

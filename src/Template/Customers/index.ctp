@@ -1,6 +1,7 @@
 <?php
 echo $this->Html->script([
-    'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js',
+    'https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit',
         ], ['block' => 'scriptLibraries']
 );
 $urlToRestApi = $this->Url->build([
@@ -10,8 +11,41 @@ echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['b
 echo $this->Html->script('Customers/index', ['block' => 'scriptBottom']);
 ?>
 
-<div  ng-app="app" ng-controller="CustomerCRUDCtrl">
+<?php
+use Cake\Utility\Security;
+echo Security::salt();
+?>
+
+<div  ng-app="app" ng-controller="CustomerCrudJwtCtrl">
     <input type="hidden" id="id" ng-model="customer.id" />
+    
+    <div id="example1"></div> 
+    <p style="color:red;">{{ captcha_status }}</p>
+    
+    
+     <table>
+        <tr>
+            <td width="200">Utilisateur (username):</td>
+            <td><input type="text" id="username" ng-model="user.username" /></td>
+        </tr>
+        <tr>
+            <td width="200">Mot de passe (password):</td>
+            <td><input type="text" id="password" ng-model="user.password" /></td>
+        </tr>
+        <tr>
+        <a ng-click="login(user)">[Connexion] </a>
+        <a ng-click="logout()">[Déconnexion] </a>
+        <a ng-click="changePassword(user.password)">[Changer le mot de passe]</a>              
+        </tr>
+    </table>
+    <p style="color: green">{{message}}</p>
+    <p style="color: red">{{errorMessage}}</p>  
+    
+    
+    
+    
+    
+    
     <table>
         <tr>
             <td width="100">Customers details</td>
