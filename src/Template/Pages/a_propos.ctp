@@ -36,7 +36,7 @@
                 Les listes liées sont des tables type_meal et name_type. <br>
         </li>
         <li>
-                L'autocomplétion fait parti de la table name_meal mais elle est liées à la tabel Meals. <br>
+                L'autocomplétion fait parti de la table name_meal mais elle est liées à la tabel Meals.(AngularJS, CRUD) <br>
         </li>
         <li>
                 bootstrap de Twitter est utiliée pour la mise en page de admin/customers. <br>
@@ -68,9 +68,12 @@
     </li>
 	<li>Le nom du User est afficher<br>
     </li>
-        <li>Les Files sert à ajouter/supprimer/modifire un image<br>
+        <li>Les Files sert à ajouter/supprimer/modifire un image. Maintenant nous pouvons ajouter un image en fessant un Drag and Drop sur la page du site.<br>
     </li>
-	<li>Le nom du User est afficher<br>
+	<li>Un Captcha permet de authentifier un utilisateur<br>
+    </li>
+    </li>
+	<li>JWT permet le log in pour y ajouter/modifier/supprimer les customers (Non fonctionelle)<br>
     </li>
 	<ul>
         <li>Lien vers Mon gitHub: </li>

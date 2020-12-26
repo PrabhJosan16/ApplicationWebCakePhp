@@ -17,7 +17,7 @@ echo Security::salt();
 ?>
 
 <div  ng-app="app" ng-controller="CustomerCrudJwtCtrl">
-    <input type="hidden" id="id" ng-model="customer.id" />
+    
     
     <div id="example1"></div> 
     <p style="color:red;">{{ captcha_status }}</p>
@@ -46,7 +46,11 @@ echo Security::salt();
     
     
     
-    <table>
+   <table>
+        <tr>
+            <td width="150">ID:</td>
+            <td><input type="text" id="id" ng-model="customer.id" /></td>
+        </tr>
         <tr>
             <td width="100">Customers details</td>
             <td><input type="text" id="Customer_Details" ng-model="customer.Customer_Details" /></td>
@@ -56,12 +60,15 @@ echo Security::salt();
             <td><input type="text" id="contact" ng-model="customer.contact" /></td>
         </tr>
     </table>
-    <button ng-click="updateCustomer(customer)">Update Customer</button>
-    <button ng-click="addCutomer(customer.Customer_Details, customer.contact)">Add Customer</button>
-    
+    <br /> <br /> 
+    <a ng-click="getCustomer(customer.id)">Get Customer</a> 
+    <a ng-click="updateCustomer(customer.id, customer.Customer_Details, customer.contact)">Update Customer</a> 
+    <a ng-click="addCustomer(customer.Customer_Details, customer.contact)">Add Customer</a> 
+    <a ng-click="deleteCustomer(customer.id)">Delete Customer</a>
+
+    <br /> <br />
     <p style="color: green">{{message}}</p>
     <p style="color: red">{{errorMessage}}</p>
-    
 
     
     <table class=' hoverable bordered'>

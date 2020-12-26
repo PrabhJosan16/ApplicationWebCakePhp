@@ -31,7 +31,8 @@ CREATE TABLE files (
 INSERT INTO files (id, `name`, path, created, modified, `status`) VALUES
 (11, 'pizza.jpeg', 'files/add/', '2020-11-18 14:18:06', '2020-11-18 14:18:06', 1),
 (12, 'Frites.webp', 'files/add/', '2020-11-18 14:18:13', '2020-11-18 14:18:13', 1),
-(13, 'steak.jpg', 'files/add/', '2020-11-18 14:18:20', '2020-11-18 14:18:20', 1);
+(13, 'steak.jpg', 'files/add/', '2020-11-18 14:18:20', '2020-11-18 14:18:20', 1),
+(14, 'poutine.jpg', 'files/add/', '2020-12-24 21:45:45', '2020-12-24 21:45:45', 1);
 
 CREATE TABLE i18n (
   id int(11) NOT NULL,
@@ -265,7 +266,7 @@ ALTER TABLE customers
   MODIFY id int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 ALTER TABLE files
-  MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 ALTER TABLE i18n
   MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
